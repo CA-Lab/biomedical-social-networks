@@ -20,7 +20,7 @@
 \begin{document}
 
 \title{A game-theory modeling approach to utility
-  and strength of interactions dynamics in biomedical research social networks}
+  and attachment dynamics in biomedical research social networks}
 %\title{Two games modeling approach to collaboration dynamics in biomedical
 %research social networks}
 
@@ -74,19 +74,19 @@
   Prisoner's Dilemma implemented on a collaboration network. With this
   model we explore the distribution of resources and the dynamics of
   the strengthening or weakening of collaboration connections among
-  partners, as scientists cooperate or defect in order to gain access
-  to others' resources. The network is based on data about projects
+  partners that we call attachment, as scientists cooperate or defect in order
+  to gain access to others' resources. The network is based on data about projects
   that were awarded with a grant. In this sense, we assume that
-  resources are funds, equipment and time. We define Fitness as how
+  resources are funds, equipment and time. We define Utility as how
   much access a researcher has to the resources of his collegues.  We
   tested our simulation on the real biomedical research network and
   compared the results with an Erd\"{o}s-Reny\'i, a Watts-Strogatz
   small-world and Barab\'asi-Albert topologies. Different topologies
-  display different fitness and connections strength
-  distributions. Moreover, the distribution of fitness and connections
-  strength in the researchers network is similar to that of
+  display different utility and attachment
+  distributions. Moreover, the distribution of utility and attachment in the
+  researchers network is similar to that of 
   Barab\'asi-Albert and Watts-Strogatz topologies, respectively. We
-  believe that fitness distribution in the researchers network
+  believe that utility distribution in the researchers network
   suggests that there are socio-cultural mechanisms governing the
   network that produce an asymmetric distribution of resources. The
   high distribution of strong connections might reflect some sort of
@@ -106,9 +106,9 @@
 \section{Introduction}
 \label{intro}
 
-\textbf{Notes:}
+%\textbf{Notes:}
 
-\begin{itemize}
+%\begin{itemize}
 
 %% \item In this paper there are two games played simultaneously: One for
 %% maximazing individual utility; the second for maximazing the connection
@@ -116,8 +116,8 @@
 %% network of collaboration.
 
 
-\item We change utility for fitness. Utility seems a better concept in order to
-  reflect players' preferences.  
+%\item We change utility for fitness. Utility seems a better concept in order to
+  %reflect players' preferences.  
 
 %% \item In the context of our paper, utility represents
 %%   the preference for having access to the resources of others. Maximazing
@@ -135,25 +135,25 @@
 %%   seems that there is no single dominant strategy.}\\
   
 
-\item Choosing a strategy depends on the balance $\eta'$ equation --look at page
-  9. This
-  equation states that the probability of an agent to cooperate increases as: a)
-  its utility increases --as it moves away from 0, or; b) The strength of the
-  connection with its peers increases --as it moves away from 0, or; c) both
-  increases.
+%\item Choosing a strategy depends on the balance $\eta'$ equation --look at page
+ %%  9. This
+%   equation states that the probability of an agent to cooperate increases as: a)
+%   its utility increases --as it moves away from 0, or; b) The strength of the
+%   connection with its peers increases --as it moves away from 0, or; c) both
+%   increases.
 
-  $\eta_i = \frac{\langle f_i \rangle + \langle w_{ij} \rangle _j}{2}$\\
+%   $\eta_i = \frac{\langle f_i \rangle + \langle w_{ij} \rangle _j}{2}$\\
 
-\item{En la pagina 9 decimos que ``In order for the agent to choose to cooperate
-  or defect, a degree of willingness to cooperate is assigned to each agent.'' No estoy
-  seguro que ``degree of willingness to cooperate'' sea la mejor manera de
-  decirlo, mi duda está en la palabra ``degree'', por lo que cambi\'e la
-  oraci\'on a: The probability for an agent to cooperate or defect depends on a
-number that referes to a historical balance between average utility and the average strength of
-the connections with its neigbors. }
+% \item{En la pagina 9 decimos que ``In order for the agent to choose to cooperate
+%   or defect, a degree of willingness to cooperate is assigned to each agent.'' No estoy
+%   seguro que ``degree of willingness to cooperate'' sea la mejor manera de
+%   decirlo, mi duda está en la palabra ``degree'', por lo que cambi\'e la
+%   oraci\'on a: The probability for an agent to cooperate or defect depends on a
+% number that referes to a historical balance between average utility and the average strength of
+% the connections with its neigbors. }
 
   
-\end{itemize}
+% \end{itemize}
 
 Collaboration has become a cornerstone in biomedical research today.
 In contrast to physics which has a long history and experience in
@@ -544,14 +544,13 @@ pay-offs following the PD matrix. A pair of neighbors will add-up to the strengt
 their connection ($w_{ji}$) as they coordinate or anti-coordinate, being $w$
 also cumulative. We measure global utility and connection strength for the whole
 network. Global utility $U$ is the sum of all individual utilities and global
-strength of connections or $W$ is the sum of every pair of agents' links
-$w$. Metaphorically, the strength of connection can 
-be thought as some sort of ``trust''.\\
+attachment or $W$ is the sum of every pair of agents' links
+$w$. Metaphorically, the attachment can be thought as some sort of ``trust''.\\
 
 {\color{red} It should be noted that the same actions or behaviors work for
   both $u$ and $w$. There are two reasons for this decision in the design of the
 model. The most general one is that we believe that in the real world,
-actions such as cooperating and defecting affect the strength of the connection
+actions such as cooperating and defecting affect the attachment
 among people. The second one is that we think that selfishly maximizing resources and
 strenghting relationships are \emph{opposing forces} acting on the same set of
 behaviors. The actions of an agent imply a trade-off in which defecting may
@@ -569,11 +568,10 @@ the other networks.\\
 
 The probability for an agent to cooperate or defect depends on a
 number ($\eta$) that referes to a historical balance between average utility and
-the average strength of the connections with its neigbors.   {\color{red} This is so
-  because we assume that whatever the result in utility or strength of
-  connection, as long as one of them increases, the player will be confident in
-  the strategy followed so far}.\\ 
-
+the average attachment with its neigbors.   {\color{red} This is so
+  because we assume that whatever the result in utility or attachment, as long
+  as one of them increases, the player will be confident in the strategy
+  followed so far}.\\   
 
 $\eta$ is calculated as:\\ 
 
@@ -599,7 +597,7 @@ behavior simultaneously. \\
 
 We ran two different experiments. In the first we simulated different values of
 carrying capacity $\nu$. With this experiment we were able to see how the number of
-cooperators, utility, strength of connections among agents and the ratio of
+cooperators, utility, attachment among agents and the ratio of
 shifting state population would change in the range of the carrying
 capacity. For this experiment the states of the agents were the same at
 initialization, for all values of the carrying capacity. Since the model is
@@ -649,8 +647,8 @@ with data from collaborative projects. Our data was obtained from CONACyT and in
 In this section we present the main results of the study, namely the topological
 structure of the underlying network models, the dynamics of the games under
 different parameters and network topologies and the distribution of utility and
-of the strength of interaction resulting of playing the games in all the
-different scenarios considered, including the real FOSISS network.\\
+attachment resulting of playing the games in all the different scenarios
+considered, including the real FOSISS network.\\ 
 
 
 FOSISS network summed-up a total of 145 components or subnetworks, but we ran
@@ -687,7 +685,7 @@ of the phase transition is different according to the topology of the
 network at stake. When $\nu$ is between $0.0$ and $0.2$, that is, when there is
 no space or a very short one for suspiciousness, all agents cooperate, when
 \textit{carrying capacity} is above $0.25$, all agents defect. \textit{Utility},
-\textit{strength of interactions}, and \textit{changing state population}
+\textit{attachment}, and \textit{changing state population}
 replicate that same behavior for the same limits. \\ 
 
 In \textbf{Figure 2}, we present how the number of cooperators in the population
@@ -736,23 +734,23 @@ simulation.
 
 \FloatBarrier
 
-Utility and strength of interactions dynamics under different $\nu$ emulate the
+Utility and attachment dynamics under different $\nu$ emulate the
 phase transition found before. In \textbf{Figures 3 and 4}, it can be observed
-that there is a drop in utility and strength of interactions according to the
+that there is a drop in utility and attachment according to the
 drop in the number of cooperators. Erd\"{o}s-Reny\'i and Barab\'asi-Albert
 networks are quite similar in the way these variables fall in two steps, the
 first one at $\nu \approx 0.2$ and the next one at $\nu \approx 0.23$. The fall
-is sharper still in the Barab\'asi-Albert topology. Utility and strength of
-interactions phase transition in Watts-Strogatz network is significantly more
+is sharper still in the Barab\'asi-Albert topology. Utility and attachment phase
+transition in Watts-Strogatz network is significantly more 
 staggered compared to the former networks. In the case of utility, there is a
 region in the limits of $\nu \approx 0.25$ and $\nu \approx 0.3$, before utility
-goes to $0$, in which it remains low but stable over time. In general, strength
-of interactions follows the same pattern as utility but in the same $\nu \approx
-0.25$ and $\nu \approx 0.3$, strength of interactions grows to a value that is
+goes to $0$, in which it remains low but stable over time. In general,
+attachment follows the same pattern as utility but in the same $\nu \approx 
+0.25$ and $\nu \approx 0.3$, attachment grows to a value that is
 higher than the one given by default but soon starts to decrease as the
-simulation runs. For FOSISS network, utility and strength of interactions fall
+simulation runs. For FOSISS network, utility and attachment fall
 is quite steep but smooth, without sharp cuts. Between $\nu \approx 0.23$ and
-$\nu \approx 0.28$, utility and strength of interactions start at their lowest,
+$\nu \approx 0.28$, utility and attachment start at their lowest,
 but there is a slight increase in both of them.
 
 
@@ -776,7 +774,7 @@ but there is a slight increase in both of them.
 \includegraphics[scale=0.28]{images/erdos_trust_nus_1.png} & \includegraphics[scale=0.28]{watts_trust_nus_1.png} \\
 \includegraphics[scale=0.28]{images/barabasi_trust_nus_1.png} & \includegraphics[scale=0.28]{fosiss_trust_nus_1.png}
 \end{tabular}
-\caption{Strength of interactions $w$ dynamics as a function of carrying capacity $\nu$ and time.}\label{trust}
+\caption{Attachment $w$ dynamics as a function of carrying capacity $\nu$ and time.}\label{trust}
 \end{figure}
 
 \FloatBarrier
@@ -805,8 +803,8 @@ and all nodes become defectors.
 
 \FloatBarrier
 
-Central to our argument is the differences in utility and strength of
-interactions distribution at the end of the simulation, for every topology. We
+Central to our argument is the differences in utility and attachment
+distribution at the end of the simulation, for every topology. We 
 found that utility distribution for the \textit{FOSISS} network, resembles quite
 accurately to the distribution of utility in the Barab\'asi-Albert
 network.\\ 
@@ -860,15 +858,15 @@ Barab\'asi-Albert network. \\
 \FloatBarrier
 
 Regarding strength of interactions distribution, the Erd\"{o}s-R\'enyi random
-network displays a normal distribution of strength of interactions, as
-expected. Again strength of interactions values are highly influenced by the
+network displays a normal distribution of attachment, as
+expected. Again attachment values are highly influenced by the
 corresponding degree distribution (Figure 7A). However, in the Watts-Strogatz
-network topology (Figure 7B), the strength of interactions distribution is a
+network topology (Figure 7B), the attachment distribution is a
 highly asymmetric bimodal, with a really-low frequency mode of low strength of
-interactions and a highly probability mode for high strength of interactions. A
+interactions and a highly probability mode for high attachment. A
 possible explanation for this phenomenon is that under network topologies
 maximizing inter-node communication (by minimizing the average distance between
-nodes) such as the Watts-Strogatz, strength of interactions is favored both
+nodes) such as the Watts-Strogatz, attachment is favored both
 among the cooperators (constituting the majority of players) and the
 defectors. \\ 
 
@@ -878,7 +876,7 @@ distribution with values higher (on average) than those of the Erd\"{o}s-R\'enyi
 random network, this may be the effect of increased communication due to more
 efficient network navigability. Interestingly, the network corresponding to the
 real FOSISS collaborations (7D) is an asymmetric unimodal distribution in which
-moderate to high values of strength of interactions are more likely. We 
+moderate to high values of attachment are more likely. We 
 hypothesize that this effect is also due to the communication properties of the
 network. 
 
@@ -891,10 +889,10 @@ network.
 \includegraphics[scale=0.28]{images/barabasi_trust.png} & 
 \includegraphics[scale=0.28]{images/fosiss_trust.png}
 \end{tabular}
-\caption{Strength of interactions distribution on different topologies. A. Random, Erd\"{o}s-R\'enyi network displays a normal-like
-  distribution. B. Watts-Strogatz network strength of interactions distribution is bimodal and highly skewed to the right. C.
-  Barab\'asi-Albert network strength of interactions distribution is also a normal-like curve. D. FOSISS, biomedical researchers
-  collaboration network distribution of strength of interactions is skewed to
+\caption{attachment distribution on different topologies. A. Random, Erd\"{o}s-R\'enyi network displays a normal-like
+  distribution. B. Watts-Strogatz network attachment distribution is bimodal and highly skewed to the right. C.
+  Barab\'asi-Albert network attachment distribution is also a normal-like curve. D. FOSISS, biomedical researchers
+  collaboration network distribution of attachment is skewed to
   the right.}\label{histo_trust}  
 \end{figure}
 
@@ -911,21 +909,21 @@ system.\\
 \label{sec:3}
 
 {\color{red}In this work we have analyzed the influence of parameters given by the underlying social structure of a science
-collaborative network on collective strength of interactions and utility dynamical behavior, based on a class of iterated
+collaborative network on collective attachment and utility dynamical behavior, based on a class of iterated
 PD and coordination games. Such parameters include mainly local and global connectivity like the degree centrality and
 average clustering coefficient, as well as communication patterns.}\\
 
 {\color{red}Under the assumptions given by the model, we were able to notice
   that, in general, communication within the social
-collaborative networks has a positive correlation with average strength of interactions between the individuals partaking in the games and
+collaborative networks has a positive correlation with average attachment between the individuals partaking in the games and
 also with the global collective utility (given by the sum of the individual payoffs). The better the
-communication among players, the higher the strength of interactions and the utility leading to an optimized functioning of the whole
+communication among players, the higher the attachment and the utility leading to an optimized functioning of the whole
 \emph{scientific collaboration system}. This is an important result that may be useful for scientific policy planning
 and may set a foundation for the optimal use of social networks in scientific collaboration as a means to improve the
 relationships among collaborating peers and thus ultimately the performance of research systems. 
 We obviously need more qualitative work in order to validate these results from a sociological and anthropological
 perspective.\\ %Furthermore, such validation is necessary because, as we said at
-             %the beginning of this work, \emph{strength of interactions} can
+             %the beginning of this work, \emph{attachment} can
              %have many different meanings and implementations in the real
              %world. The same we can say about \emph{utility} and most of all,
              %about the very idea of the game we explored here since ``playing
@@ -938,7 +936,7 @@ about the role of computational simulations in the social sciences. Finally we w
 future work.}\\
 
 
-{\color{red}The two main results of our model are the smoothness in the phase transition-like behavior for different parameters and the distribution of utility and strength of interactions in the FOSISS network compared to other networks and their topologies. We are certain that the particular structure of FOSISS network is playing a central role in the results and because of that we would like to discuss it a little bit further.}\\
+{\color{red}The two main results of our model are the smoothness in the phase transition-like behavior for different parameters and the distribution of utility and attachment in the FOSISS network compared to other networks and their topologies. We are certain that the particular structure of FOSISS network is playing a central role in the results and because of that we would like to discuss it a little bit further.}\\
 
 {\color{red}FOSISS network is higly hierarchical according to its heterogeneity of $0.873$. Because of it, one would
   expect to find the presence of important hubs \cite{Wu-etal2008}, that is, a few researchers control the whole
@@ -973,15 +971,15 @@ policy has lead researchers from the same group to ask for grants from the same 
 budgets. A consequence of this behavior is that group interactions get reinforced, but integroup connections not necessarily so.}\\
 
 {\color{red}As is common among scientific communities in biomedical research, PIs play a central role in the network. Strong PIs and
-well connected groups seem to be somehow responsible for the high levels of strength of interactions and the centralization of utility in
+well connected groups seem to be somehow responsible for the high levels of attachment and the centralization of utility in
 our simulation. As for what seems to be phase transitions, in the case of FOSISS networks, these are smoother than
 those in the other networks with different topologies, even for those with a small-world topology. We think that this
-behavior is also the result of the hierarchical structure already mentioned. If this is true, strength of interactions is first lost in the
+behavior is also the result of the hierarchical structure already mentioned. If this is true, attachment is first lost in the
 edges that link diffrent goups and then in the edges that connect members of the groups. Connections between groups would not
 be as dense as those inside the groups, which means that there would not be enough information of the behavior of one group regarding
 its neighbors to constrain them as it seems to happen with individual researchers inside their communities. Nevertheless,
 if values of the carrying capacity $\nu$ keep increasing and it becomes more
-difficult to strengthen interactions, then strength of interactions begins to diminish inside groups.}\\
+difficult to strengthen interactions, then attachment begins to diminish inside groups.}\\
 
 {\color{red}Another issue that we would like to mention about FOSISS network topology is that it is not a robust collaboration network.
 At the level of groups, these might be well connected and consolidated but at the level of the network, this could be
