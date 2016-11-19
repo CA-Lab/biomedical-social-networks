@@ -20,7 +20,7 @@
 \begin{document}
 
 \title{A game-theory modeling approach to utility
-  and attachment dynamics in biomedical research social networks}
+  and strength of interactions dynamics in biomedical research social networks}
 %\title{Two games modeling approach to collaboration dynamics in biomedical
 %research social networks}
 
@@ -73,20 +73,20 @@
   scientists are embedded. Here we develop a model based on the
   Prisoner's Dilemma implemented on a collaboration network. With this
   model we explore the distribution of resources and the dynamics of
-  the strengthening or weakening of collaboration connections among
-  partners that we call attachment, as scientists cooperate or defect in order
-  to gain access to others' resources. The network is based on data about projects
+  the strengthening or weakening of collaboration interactions among
+  partners, as scientists cooperate or defect in order to gain access
+  to resources shared by others. The network is based on data about projects
   that were awarded with a grant. In this sense, we assume that
-  resources are funds, equipment and time. We define Utility as how
+  resources are funds, equipment and time. We define Fitness as how
   much access a researcher has to the resources of his collegues.  We
   tested our simulation on the real biomedical research network and
   compared the results with an Erd\"{o}s-Reny\'i, a Watts-Strogatz
   small-world and Barab\'asi-Albert topologies. Different topologies
-  display different utility and attachment
-  distributions. Moreover, the distribution of utility and attachment in the
-  researchers network is similar to that of 
+  display different fitness and connections strength
+  distributions. Moreover, the distribution of fitness and connections
+  strength in the researchers network is similar to that of
   Barab\'asi-Albert and Watts-Strogatz topologies, respectively. We
-  believe that utility distribution in the researchers network
+  believe that fitness distribution in the researchers network
   suggests that there are socio-cultural mechanisms governing the
   network that produce an asymmetric distribution of resources. The
   high distribution of strong connections might reflect some sort of
@@ -106,54 +106,54 @@
 \section{Introduction}
 \label{intro}
 
-%\textbf{Notes:}
+%% \textbf{Notes:}
 
-%\begin{itemize}
+%% \begin{itemize}
 
-%% \item In this paper there are two games played simultaneously: One for
-%% maximazing individual utility; the second for maximazing the connection
-%% strength. We are interested in how they affect eachother in the context of a
-%% network of collaboration.
+%% %% \item In this paper there are two games played simultaneously: One for
+%% %% maximazing individual utility; the second for maximazing the connection
+%% %% strength. We are interested in how they affect eachother in the context of a
+%% %% network of collaboration.
 
 
-%\item We change utility for fitness. Utility seems a better concept in order to
-  %reflect players' preferences.  
+%% \item We change utility for fitness. Utility seems a better concept in order to
+%%   reflect players' preferences.  
 
-%% \item In the context of our paper, utility represents
-%%   the preference for having access to the resources of others. Maximazing
-%%   utility means that the player is increasing its access to the resources of
-%%   other players.  Utility function is just the sum of the payoffs of playing
-%%   with its neighbors. As for the payoff matrix, the best strategy for a player
-%%   is to defect. Any other option will not be an optimal payoff. The opossing
-%%   force is in the other game. The game for maximazing the strength of the
-%%   connection among players. In this case defecting or cooperating? is the best
-%%   strategy as it pays the most when coordinating regardeless they both cooperate
-%%   or defect, this is because when both cooperate the interaction gets a positive
-%%   payoff, when both defect, the interaction doesn't get affected; but if they
-%%   anti-coordinate, then the interaction looses. In this sense, this might be a
-%%   game were there are multiple (i.e., 2 points or strategies) equilibria. It
-%%   seems that there is no single dominant strategy.}\\
+%% %% \item In the context of our paper, utility represents
+%% %%   the preference for having access to the resources of others. Maximazing
+%% %%   utility means that the player is increasing its access to the resources of
+%% %%   other players.  Utility function is just the sum of the payoffs of playing
+%% %%   with its neighbors. As for the payoff matrix, the best strategy for a player
+%% %%   is to defect. Any other option will not be an optimal payoff. The opossing
+%% %%   force is in the other game. The game for maximazing the strength of the
+%% %%   connection among players. In this case defecting or cooperating? is the best
+%% %%   strategy as it pays the most when coordinating regardeless they both cooperate
+%% %%   or defect, this is because when both cooperate the interaction gets a positive
+%% %%   payoff, when both defect, the interaction doesn't get affected; but if they
+%% %%   anti-coordinate, then the interaction looses. In this sense, this might be a
+%% %%   game were there are multiple (i.e., 2 points or strategies) equilibria. It
+%% %%   seems that there is no single dominant strategy.}\\
   
 
-%\item Choosing a strategy depends on the balance $\eta'$ equation --look at page
- %%  9. This
-%   equation states that the probability of an agent to cooperate increases as: a)
-%   its utility increases --as it moves away from 0, or; b) The strength of the
-%   connection with its peers increases --as it moves away from 0, or; c) both
-%   increases.
+%% \item Choosing a strategy depends on the balance $\eta'$ equation --look at page
+%%   9. This
+%%   equation states that the probability of an agent to cooperate increases as: a)
+%%   its utility increases --as it moves away from 0, or; b) The strength of the
+%%   connection with its peers increases --as it moves away from 0, or; c) both
+%%   increases.
 
-%   $\eta_i = \frac{\langle f_i \rangle + \langle w_{ij} \rangle _j}{2}$\\
+%%   $\eta_i = \frac{\langle f_i \rangle + \langle w_{ij} \rangle _j}{2}$\\
 
-% \item{En la pagina 9 decimos que ``In order for the agent to choose to cooperate
-%   or defect, a degree of willingness to cooperate is assigned to each agent.'' No estoy
-%   seguro que ``degree of willingness to cooperate'' sea la mejor manera de
-%   decirlo, mi duda está en la palabra ``degree'', por lo que cambi\'e la
-%   oraci\'on a: The probability for an agent to cooperate or defect depends on a
-% number that referes to a historical balance between average utility and the average strength of
-% the connections with its neigbors. }
+%% \item{En la pagina 9 decimos que ``In order for the agent to choose to cooperate
+%%   or defect, a degree of willingness to cooperate is assigned to each agent.'' No estoy
+%%   seguro que ``degree of willingness to cooperate'' sea la mejor manera de
+%%   decirlo, mi duda está en la palabra ``degree'', por lo que cambi\'e la
+%%   oraci\'on a: The probability for an agent to cooperate or defect depends on a
+%% number that referes to a historical balance between average utility and the average strength of
+%% the connections with its neigbors. }
 
   
-% \end{itemize}
+%% \end{itemize}
 
 Collaboration has become a cornerstone in biomedical research today.
 In contrast to physics which has a long history and experience in
@@ -240,8 +240,8 @@ to maximize their access to resources while taking care of their collaboration l
   %% negative impact on that primary objective?}\\  
 
  {\color{red}In this article we explore the network effect on the distribution
-   of players having access to certain amount of resources from other players in the
-   network and the distribution of the strength of connections among
+   of players having access to certain amount of resources shared by other players in the
+   network and the distribution of the strength of interactions among
    them. Particularly, we implemented two games played simultaneously: 
    one for maximazing individual utility based on the iterated Prisoner's
    Dilemma; the other, a coordination game for maximazing the connection strength between
@@ -249,14 +249,13 @@ to maximize their access to resources while taking care of their collaboration l
    the context of a network of scientific collaboration under the idea that while
    researchers are interested in maximazing their utilities, they also know that
    it is important to invest in building collaborative relationships. These two
-   behaviors are explored in a biomedical research community of M\'exico.}\\    
+   behaviors are explored in a biomedical research community of M\'exico.}\\
 
 {\color{red}In the context of our paper, utility represents
-  the preference for having access to the resources of others. Maximazing
-  utility means that the player is increasing its access to the resources of
-  other players. The value of the Utility function for a player is the sum of the payoffs of playing
-  with his neighbors. The opossing force comes from the other concurrent game: players
-  trying to maximize the strength of their connections to other players. In the coordinating game
+  access to resources shared by others.
+  The value of the Utility function for a player is the sum of the payoffs of playing
+  with its neighbors. The opossing force comes from the other concurrent game: players
+  trying to maximize the strength of their interactions with other players. In the coordinating game
   the best strategy is to adopt the same strategy as the other player, as it pays the most
   regardless of cooperation or defection in the utility game. When
   both cooperate the interaction gets a positive payoff, when both defect, the
@@ -267,7 +266,7 @@ to maximize their access to resources while taking care of their collaboration l
   to a cooperator are ghost authorship or
   prestige authorship.
 
-  % este ejemplo de defection no es nada claro:
+  % TODO: este ejemplo de defection no es nada claro:
   %
   % Another example may be a working strategy in which some
   % members of a team do the work at certain moment, and then another part 
@@ -283,7 +282,7 @@ research in M\'exico. This is the source of the
 database from which we created the researchers collaboration network. Next we
 describe our model
 and the different network topologies on which we explored it.
-We then present our results and discuss them briefly. In the last section
+We then present our results and discuss them. In the last section
 we draw some final remarks and conclusions.
 
 
@@ -389,25 +388,24 @@ such funds. FOSISS is constituted by CONACyT, SSA, IMSS and ISSSTE,\footnote{SSA
   the acronym for Social Security Mexican Institute (\emph{Instituto Mexicano
     del Seguro Social}); ISSSTE stands for Institute for Social Security and
   Services for State Workers (\emph{Instituto de Seguridad y Servicios Sociales
-    de los Trabajadores del Estado})} being all of them the major public health
+    de los Trabajadores del Estado})} all of them being the major public health
 providers and research institutions in the country. Every year CONACyT opens a
 call for funds limited to a set of health research areas previously defined by a
 group of experts. Such areas range from public health issues to chronic and
 degenerative diseases.\\  
 
-Eligibility is open to public and private health research sectors,
-however most applicants are public universities and research
-institutions. From 2002 through 2013, there were 91 institutions funded that
-comprised 4988 researchers.\\ 
+Most applicants are public universities and research institutions, but
+eligibility is open to public and private health research sectors.
+From 2002 through 2013, there were 91 institutions funded that
+comprised 4988 researchers.\\
 
-From these data some important considerations should be made clear. The
-population represented in the data include principal investigators (PIs),
-associate researchers, postdoctoral associates, postgraduate and undergraduate
-students.
-% wut? which information is not specified? which is pi and which is undergrad is not specified?
-Unfortunately, this information is not specified in the
-database. Still, this is something we acknowledge and it's important because
-researchers in our network are under different circumstances and we know
+From these data some important considerations should be made
+clear. Scientists in the database take on the roles of principal
+investigators (PIs), associate researchers, postdoctoral associates,
+postgraduate and undergraduate students.
+Unfortunately, information on these roles is not specified in the database.
+We acknowledge the importance of this deficiency because
+researchers in our network act under different circumstances and we know
 that this diversity has a real impact on the structure and eventually on the
 dynamics of the network, as well as on the results of our model.\\  
 
@@ -417,10 +415,10 @@ to which it was assigned. It specifies the names of PIs or the people
 responsible for the project and the names of collaborators.
 Researchers can be PIs in one project and collaborators on a different project. The institutional
 affiliation of all participants is included. Through this affiliation
-we know the principal institution
+we determine the principal institution
 behind every project.\\ 
 
-Even though curation and analysis work of the database is still ongoing, some
+Even though curation and analysis work of this database is still going on, some
 relevant facts about the biomedical research can be said. Over the period of 12
 years, 32 general research areas have been defined, the three most funded
 research areas are \emph{chronic and degenerative diseases}, \emph{malignant
@@ -448,19 +446,19 @@ RNA, etc.\footnote{Regulation exists regarding researcher-subject relations
   the Ethics Committee and IRB.} Something similar happens with data. There have
 been some attempts to create open data repositories for biomedical research, but
 they have not been established yet. Regulation on these subjects is still
-missing. Finally, technology (e.g., PCR, sequencing and expression profiling
-technology) is in the domain of the institutions with the highest research
-profiles and sometimes PIs see technology as a personal good.\\  
+missing. Finally, technologically advanced equipment such as high throughput sequencers
+are kept by institutions with the highest research
+profiles and sometimes PIs manage them in a self serving way.\\  
 
 From our ethnographic work to date, we have been able to see that
 biological samples, data and technology can become instruments for negotiating
 collaboration. For example, among people involved in research projects, there
 are researchers that do not have direct access to samples, simply because their
-institution does not offer clinical services. Many of them are non medical
+parent institution does not offer clinical services. Many of them are non medical
 doctors but chemists, biologists, physicists, and mathematicians. There is
-another group of researchers that are placed on hospitals who are able to do
+another group of researchers that are placed on hospitals which is able to do
 research and have access to biological samples from their own patients. It seems
-that this group is the most privileged one, and the least pressured to establish
+that this group is the most privileged one, and the one with the least pressure to establish
 collaboration at whatever cost. Finally, there is one more group formed by those
 who work as clinicians at small hospitals with no research infrastructure
 whatsoever. This group may have an interest in research and the way for them to
@@ -491,13 +489,13 @@ or defect depend on a specific strategy, such as the well known
 can modify the weight of the interactions with their neighbors
 \cite{Santos2006}. From a different perspective others have explored the effect
 of different topologies on the emergence of cooperation
-\cite{Santos2005,Hauert2004}. {\color{red}In our case, an agent's decision to cooperate or
-defect is an outcome that depends on a balance between
+\cite{Santos2005,Hauert2004}. {\color{red}In our model, an agent's decision to cooperate or
+defect depends on a balance between
 utilities and the current strength of its collaboration relationships. Such
 balance reflects the overall success or failure of its strategies}. We
 study the behavior of the system under different topologies, including a
 real-world network.\\  
-  
+
 
 In our model, agents are embedded in a network with varying number of
 neighbors. Following the traditional PD game, the strategy chosen by an agent
@@ -519,14 +517,14 @@ property of agents in which pay-off is accumulated.\\
 
 \end{tabular}\\ \\
 
-The strength of the connection, represented by $w$, is a property of the link between two agents and
+The strength of the interaction, represented by $w$, is a property of the link between two agents and
 gets updated according to an $A_{ij}$ matrix of a coordination game. In the $w$ matrix, the highest value
 goes to an edge when both agents cooperate, getting an $R$ for reward, if one of
 them defects, the connection gets weaker getting $P$ for the collaborative
 connection being punished. If both agents defect, the value $w$ doesn't change,
 which means that agents didn't interact or that the interaction gets nullified
 $N$. In this game, the best action for any agent is to coordinate with its
-neighbor, either beacuse it wins or it doesn't loose. \\ 
+neighbor, either beacuse it wins or because it doesn't loose. \\ 
 
 {\bf $w$ pay-off matrix}\\
 
@@ -541,18 +539,19 @@ neighbor, either beacuse it wins or it doesn't loose. \\
 
 After each game, the agent adds-up utility ($u$), which is the sum of the
 pay-offs following the PD matrix. A pair of neighbors will add-up to the strength of
-their connection ($w_{ji}$) as they coordinate or anti-coordinate, being $w$
+their interaction ($w_{ji}$) as they coordinate or anti-coordinate, being $w$
 also cumulative. We measure global utility and connection strength for the whole
 network. Global utility $U$ is the sum of all individual utilities and global
-attachment or $W$ is the sum of every pair of agents' links
-$w$. Metaphorically, the attachment can be thought as some sort of ``trust''.\\
+strength of connections or $W$ is the sum of every pair of agents' links
+$w$. The strength of interaction can 
+be thought as some sort of ``trust''.\\
 
 {\color{red} It should be noted that the same actions or behaviors work for
   both $u$ and $w$. There are two reasons for this decision in the design of the
 model. The most general one is that we believe that in the real world,
-actions such as cooperating and defecting affect the attachment
-among people. The second one is that we think that selfishly maximizing resources and
-strenghting relationships are \emph{opposing forces} acting on the same set of
+actions such as cooperating and defecting affect the strength of the interaction
+among people. The second one is that we think that selfishly maximizing access to resources and
+strengthening relationships are \emph{opposing forces} acting on the same set of
 behaviors. The actions of an agent imply a trade-off in which defecting may
 increase its utility at the expense of its collaborative relationships. If
 collaborators have nourished their relationships, they might be strong enough to
@@ -568,10 +567,11 @@ the other networks.\\
 
 The probability for an agent to cooperate or defect depends on a
 number ($\eta$) that referes to a historical balance between average utility and
-the average attachment with its neigbors.   {\color{red} This is so
-  because we assume that whatever the result in utility or attachment, as long
-  as one of them increases, the player will be confident in the strategy
-  followed so far}.\\   
+the average strength of the connections with its neigbors.   {\color{red} This is so
+  because we assume that whatever the result in utility or strength of
+  connection, as long as one of them increases, the player will be confident in
+  the strategy followed so far}.\\ 
+
 
 $\eta$ is calculated as:\\ 
 
@@ -595,16 +595,20 @@ as on the real biomedical research collaboration network. The
 simulation was run in a synchronous manner, in which all agents update their
 behavior simultaneously. \\   
 
-We ran two different experiments. In the first we simulated different values of
-carrying capacity $\nu$. With this experiment we were able to see how the number of
-cooperators, utility, attachment among agents and the ratio of
-shifting state population would change in the range of the carrying
-capacity. For this experiment the states of the agents were the same at
-initialization, for all values of the carrying capacity. Since the model is
-deterministic, it will return the same result if run under the same
-conditions.\\ 
+We ran two different experiments. In the first we simulated different
+values of carrying capacity $\nu$. With this experiment we were able
+to see how the number of cooperators, utility, strength of connections
+among agents and the ratio of shifting state population would change
+in the range of the carrying capacity. The states of the agents were
+the same at initialization, for all values of the carrying
+capacity. Since the model is deterministic, it will return the same
+result if run under the same conditions.\\
 
-The second experiment consisted in running the simulation under the same degree of carrying capacity $\nu$ but randomizing the initial states of the agents. This would show that the system converges to a global state. For every network, the simulation was run 100 times and results were averaged.
+The second experiment consisted in running the simulation under the
+same degree of carrying capacity $\nu$ but randomizing the initial
+states of the agents. This would show that the system converges to a
+global state. For every network, the simulation was run 100 times and
+results were averaged.
 
 \section{Implementation of the model in different topologies}
 
@@ -628,7 +632,7 @@ Erd\"{o}s-Reny\'i networks \cite{Erdos1959} (random networks) are constructed by
 
 \subsection{Small-World}
 
-Watts-Strogatz networks \cite{Watts1998} (small-world networks) are in a regime between a fully regular grid (lattice) and a random network (Erd\"{o}s-R\'enyi). In order to build them, a node is chosen from a lattice (a ring) and the edge that connects it to nearest neighbor in a clockwise sense. With probability $p$, this edge is reconnected to a node chosen uniformly at random over the entire ring, with duplicate edges forbidden; otherwise the edge is left in place. This process is repeated by moving clockwise around the ring, considering each node in turn until one lap is completed. Next, the edges connect nodes to their second-nearest neighbors clockwise. And as before, each of these edges is randomly rewired with probability $p$, and continue this process, circulating around the ring and proceeding outward to more distant neighbors after each lap, until, each edge in the original lattice has been considered once. The main characteristic of these networks is that the average shortest path length is small and grows as $log(N)$ ($\langle l \rangle \sim log(N)$). Also, the average clustering coefficient $\langle C \rangle$ remains large in terms of $p$. For $p < 0.1$, $\langle C \rangle \sim 1$.
+Watts-Strogatz networks \cite{Watts1998} (small-world networks) are in a regime between a fully regular grid (lattice) and a random network (Erd\"{o}s-R\'enyi). In order to build them, a node is chosen from a lattice (a ring) and the edge that connects it to nearest neighbor in a clockwise sense. With probability $p$, this edge is reconnected to a node chosen uniformly at random over the entire ring, with duplicate edges forbidden; otherwise the edge is left in place. This process is repeated by moving clockwise around the ring, considering each node in turn until one lap is completed. Next, the edges connect nodes to their second-nearest neighbors clockwise. As before, each of these edges is randomly rewired with probability $p$. This process continues, circulating around the ring and proceeding outward to more distant neighbors after each lap, until each edge in the original lattice has been considered once. The main characteristic of these networks is that the average shortest path length is small and grows as $log(N)$ ($\langle l \rangle \sim log(N)$). Also, the average clustering coefficient $\langle C \rangle$ remains large in terms of $p$. For $p < 0.1$, $\langle C \rangle \sim 1$.
 
 \subsection{Barb\'asi-Albert}
 
@@ -638,7 +642,7 @@ Barb\'asi-Albert networks \cite{Barabasi1999} (scale-free networks) are generate
 \subsection{FOSISS: Biomedical research community network}
 
 The biomedical research network on which we are running our model was generated 
-with data from collaborative projects. Our data was obtained from CONACyT and includes information for twelve years of \textit{FOSISS} grants. Data included names of Principal Investigators, collaborators, research topics, etc. The network we are using here has researchers as nodes and edges represent the connection of two scientists when they colaborate in the same project. Edges are also weighted according to the number of projects shared by any pair of scientists.\\
+with data from collaborative projects. Our data was obtained from CONACyT and includes information for twelve years of \textit{FOSISS} grants. Data included names of Principal Investigators, collaborators, research topics, etc. The network we are using here has researchers as nodes and edges represent the connection of two scientists when they colaborate on the same project. Edges are also weighted according to the number of projects shared by any pair of scientists.\\
 
 
 \section{Results}
@@ -647,8 +651,8 @@ with data from collaborative projects. Our data was obtained from CONACyT and in
 In this section we present the main results of the study, namely the topological
 structure of the underlying network models, the dynamics of the games under
 different parameters and network topologies and the distribution of utility and
-attachment resulting of playing the games in all the different scenarios
-considered, including the real FOSISS network.\\ 
+of the strength of interaction resulting of playing the games in all the
+different scenarios considered, including the real FOSISS network.\\
 
 
 FOSISS network summed-up a total of 145 components or subnetworks, but we ran
@@ -680,12 +684,12 @@ Other results to report are those of the dynamics of different
 variables as the carrying capacity $\nu$ changes. The  most salient
 result is that for $\nu$ between $0.19$ and $0.24$, there is an
 apparent phase transition in all different topologies and for all the
-different variables. Nevertheless, it is worth noticing that the shape
+different variables. It is worth noting that the shape
 of the phase transition is different according to the topology of the
-network at stake. When $\nu$ is between $0.0$ and $0.2$, that is, when there is
+network under study. When $\nu$ is between $0.0$ and $0.2$, that is, when there is
 no space or a very short one for suspiciousness, all agents cooperate, when
 \textit{carrying capacity} is above $0.25$, all agents defect. \textit{Utility},
-\textit{attachment}, and \textit{changing state population}
+\textit{strength of interactions}, and \textit{changing state population}
 replicate that same behavior for the same limits. \\ 
 
 In \textbf{Figure 2}, we present how the number of cooperators in the population
@@ -698,28 +702,28 @@ defecting. Reaching $\nu \approx 0.25$ there is another sharp fall of
 cooperators and all agents turn into a defecting state.\\
 
 
-In the case of the Watts-Strogatz, small-world network, the whole population
-remains cooperating for ranges between $0$ and $0.2$ but as it gets closer to
-$0.2$, more time is needed for the population to become full of cooperators. In
-$\nu \approx 0.2$ the cooperators will represent only half of the population and
-such number of them will be constant up to $\nu \approx 0.25$ forming a short
-plateau. From $\nu \approx 0.25$ to $\nu \approx 0.6$ cooperators will be
-present at the beginning of the simulation but will go diminishing as time goes on.
-In the case of the Barab\'asi-Albert network, crossing the threshold of $\nu
-\approx 0.2$, there is a sharp decrease in the number of cooperators, but stays
-constant over time. Such behavior is present for a very short range of $\nu$, and
-before $\nu \approx 0.24$, cooperators disappear for the rest of values of
-$\nu$. Finally, FOSISS network behaves similar to the other networks in that
-there is a fall in the number of cooperators close  $\nu \approx 0.2$. Different
-to the other networks, FOSISS network lacks the sharp reduction of
-cooperators, instead this population declines smoothly and progressively;
-specially, when it reaches a $\nu \approx 0.25$ cooperators go 
-decreasing in a less dramatic manner all the way to $\nu \approx 0.5$. It is
-also noteworthy that from $\nu = 0$ to $\nu \approx 0.5$ the number of
-cooperators converge to a certain amount and stays constant for the rest of the
-simulation. 
-
-
+In the case of the Watts-Strogatz, small-world network, the whole
+population remains cooperating for ranges between $0$ and $0.2$ but as
+it gets closer to $0.2$, more time is needed for the population to
+become full of cooperators. In $\nu \approx 0.2$ the cooperators will
+represent only half of the population and such number of them will be
+constant up to $\nu \approx 0.25$ forming a short plateau. From $\nu
+\approx 0.25$ to $\nu \approx 0.6$ cooperators will be present at the
+beginning of the simulation but will diminish as time goes on.  In the
+case of the Barab\'asi-Albert network, crossing the threshold of $\nu
+\approx 0.2$, there is a sharp decrease in the number of cooperators,
+but stays constant over time. Such behavior is present for a very
+short range of $\nu$, and before $\nu \approx 0.24$, cooperators
+disappear for the rest of values of $\nu$. Finally, FOSISS network
+behaves similarly to the other networks in that there is a fall in the
+number of cooperators close to $\nu \approx 0.2$. In contrast with the
+other networks, the FOSISS network lacks the sharp reduction of
+cooperators, instead this population declines smoothly and
+progressively; specially, when it reaches a $\nu \approx 0.25$
+cooperators decrease in a less dramatic manner all the way to
+$\nu \approx 0.5$. It is also noteworthy that from $\nu = 0$ to $\nu
+\approx 0.5$ the number of cooperators converge to a certain degree
+and stays constant for the rest of the simulation.
 
 
 \begin{figure} [h!]
@@ -729,28 +733,29 @@ simulation.
   \\
   \includegraphics[scale=0.28]{images/barabasi_dc_nus_1.png} & \includegraphics[scale=0.28]{images/fosiss_dc_nus_1.png}
 \end{tabular}
-\caption{Proportion of cooperators as a function of carrying capacity and time.}\label{CD}
+\caption{Ratio of cooperators as a function of carrying capacity and time. Topologies are: A. Random, Erd\"{o}s-R\'enyi. B. Watts-Strogatz. C. Barab\'asi-Albert. D. FOSISS.
+}\label{CD}
 \end{figure}
 
 \FloatBarrier
 
-Utility and attachment dynamics under different $\nu$ emulate the
-phase transition found before. In \textbf{Figures 3 and 4}, it can be observed
-that there is a drop in utility and attachment according to the
+Utility and strength of interactions dynamics under different $\nu$ are similar to the
+phase transition found before. \textbf{Figures 3 and 4} show
+that there is a drop in utility and strength of interactions according to the
 drop in the number of cooperators. Erd\"{o}s-Reny\'i and Barab\'asi-Albert
 networks are quite similar in the way these variables fall in two steps, the
 first one at $\nu \approx 0.2$ and the next one at $\nu \approx 0.23$. The fall
-is sharper still in the Barab\'asi-Albert topology. Utility and attachment phase
-transition in Watts-Strogatz network is significantly more 
+is sharper still in the Barab\'asi-Albert topology. Utility and strength of
+interactions phase transition in Watts-Strogatz network is significantly more
 staggered compared to the former networks. In the case of utility, there is a
 region in the limits of $\nu \approx 0.25$ and $\nu \approx 0.3$, before utility
-goes to $0$, in which it remains low but stable over time. In general,
-attachment follows the same pattern as utility but in the same $\nu \approx 
-0.25$ and $\nu \approx 0.3$, attachment grows to a value that is
+goes to $0$, in which it remains low but stable over time. In general, strength
+of interactions follows the same pattern as utility but in the same $\nu \approx
+0.25$ and $\nu \approx 0.3$, strength of interactions grows to a value that is
 higher than the one given by default but soon starts to decrease as the
-simulation runs. For FOSISS network, utility and attachment fall
-is quite steep but smooth, without sharp cuts. Between $\nu \approx 0.23$ and
-$\nu \approx 0.28$, utility and attachment start at their lowest,
+simulation runs. For the FOSISS network, utility and interaction strength fall
+quite steeply but smoothly, without sharp cuts. Between $\nu \approx 0.23$ and
+$\nu \approx 0.28$, utility and strength of interactions start at their lowest,
 but there is a slight increase in both of them.
 
 
@@ -761,7 +766,7 @@ but there is a slight increase in both of them.
 \includegraphics[scale=0.28]{images/erdos_fitness_nus_1.png} & \includegraphics[scale=0.28]{images/watts_fitness_nus_1.png} \\
 \includegraphics[scale=0.28]{images/barabasi_fitness_nus_1.png} & \includegraphics[scale=0.28]{images/fosiss_fitness_nus_1.png}
 \end{tabular}
-\caption{Utility $U$ dynamics as a function of carrying capacity $\nu$ and time.}\label{fitness}
+\caption{Utility $U$ dynamics as a function of carrying capacity $\nu$ and time. Topologies are: A. Random, Erd\"{o}s-R\'enyi. B. Watts-Strogatz. C. Barab\'asi-Albert. D. FOSISS.}\label{fitness}
 \end{figure}
 
 \FloatBarrier
@@ -774,7 +779,7 @@ but there is a slight increase in both of them.
 \includegraphics[scale=0.28]{images/erdos_trust_nus_1.png} & \includegraphics[scale=0.28]{images/watts_trust_nus_1.png} \\
 \includegraphics[scale=0.28]{images/barabasi_trust_nus_1.png} & \includegraphics[scale=0.28]{images/fosiss_trust_nus_1.png}
 \end{tabular}
-\caption{Attachment $w$ dynamics as a function of carrying capacity $\nu$ and time.}\label{trust}
+\caption{Strength of interactions $w$ dynamics as a function of carrying capacity $\nu$ and time. Topologies are: A. Random, Erd\"{o}s-R\'enyi. B. Watts-Strogatz. C. Barab\'asi-Albert. D. FOSISS.}\label{trust}
 \end{figure}
 
 \FloatBarrier
@@ -798,13 +803,13 @@ and all nodes become defectors.
 \includegraphics[scale=0.28]{images/barabasi_state_nus.png} & \includegraphics[scale=0.28]{images/fosiss_state_nus.png}
 \end{tabular}
 \caption{Shifting population between cooperators and defectors as a function of
-  carrying capacity $\nu$ and time.}\label{state} 
+  carrying capacity $\nu$ and time. Topologies are: A. Random, Erd\"{o}s-R\'enyi. B. Watts-Strogatz. C. Barab\'asi-Albert. D. FOSISS.}\label{state} 
 \end{figure}
 
 \FloatBarrier
 
-Central to our argument is the differences in utility and attachment
-distribution at the end of the simulation, for every topology. We 
+Central to our argument is the differences in utility and strength of
+interactions distribution at the end of the simulation, for every topology. We
 found that utility distribution for the \textit{FOSISS} network, resembles quite
 accurately to the distribution of utility in the Barab\'asi-Albert
 network.\\ 
@@ -858,15 +863,15 @@ Barab\'asi-Albert network. \\
 \FloatBarrier
 
 Regarding strength of interactions distribution, the Erd\"{o}s-R\'enyi random
-network displays a normal distribution of attachment, as
-expected. Again attachment values are highly influenced by the
+network displays a normal distribution of strength of interactions, as
+expected. Again strength of interactions values are highly influenced by the
 corresponding degree distribution (Figure 7A). However, in the Watts-Strogatz
-network topology (Figure 7B), the attachment distribution is a
+network topology (Figure 7B), the strength of interactions distribution is a
 highly asymmetric bimodal, with a really-low frequency mode of low strength of
-interactions and a highly probability mode for high attachment. A
+interactions and a highly probability mode for high strength of interactions. A
 possible explanation for this phenomenon is that under network topologies
 maximizing inter-node communication (by minimizing the average distance between
-nodes) such as the Watts-Strogatz, attachment is favored both
+nodes) such as the Watts-Strogatz, strength of interactions is favored both
 among the cooperators (constituting the majority of players) and the
 defectors. \\ 
 
@@ -876,7 +881,7 @@ distribution with values higher (on average) than those of the Erd\"{o}s-R\'enyi
 random network, this may be the effect of increased communication due to more
 efficient network navigability. Interestingly, the network corresponding to the
 real FOSISS collaborations (7D) is an asymmetric unimodal distribution in which
-moderate to high values of attachment are more likely. We 
+moderate to high values of strength of interactions are more likely. We 
 hypothesize that this effect is also due to the communication properties of the
 network. 
 
@@ -889,109 +894,168 @@ network.
 \includegraphics[scale=0.28]{images/barabasi_trust.png} & 
 \includegraphics[scale=0.28]{images/fosiss_trust.png}
 \end{tabular}
-\caption{attachment distribution on different topologies. A. Random, Erd\"{o}s-R\'enyi network displays a normal-like
-  distribution. B. Watts-Strogatz network attachment distribution is bimodal and highly skewed to the right. C.
-  Barab\'asi-Albert network attachment distribution is also a normal-like curve. D. FOSISS, biomedical researchers
-  collaboration network distribution of attachment is skewed to
+\caption{Strength of interactions distribution on different topologies. A. Random, Erd\"{o}s-R\'enyi network displays a normal-like
+  distribution. B. Watts-Strogatz network strength of interactions distribution is bimodal and highly skewed to the right. C.
+  Barab\'asi-Albert network strength of interactions distribution is also a normal-like curve. D. FOSISS, biomedical researchers
+  collaboration network distribution of strength of interactions is skewed to
   the right.}\label{histo_trust}  
 \end{figure}
 
 \FloatBarrier
 
-An interesting feature of highly communicated networks (characterized by high values of clustering coefficient) is the
-fact that certainty among players seems to be enhanced, that is, in such networks the rate of change of strategy is
-significantly lower (and smoother) than in poorly connected networks. This is another instance in which easier
-communication (i.e. lower average minimum path lengths) lead to better performance of the whole collaborative research
-system.\\ 
+An interesting feature of highly communicated networks (characterized
+by high values of clustering coefficient) is the fact that certainty
+among players seems to be enhanced, that is, in such networks the rate
+of change of strategy is significantly lower (and smoother) than in
+poorly connected networks. This is another instance in which easier
+communication (i.e. lower average minimum path lengths) leads to better
+performance of the whole collaborative research system.\\
 
 
 \section{Discussion and Conclusions}
 \label{sec:3}
 
-{\color{red}In this work we have analyzed the influence of parameters given by the underlying social structure of a science
-collaborative network on collective attachment and utility dynamical behavior, based on a class of iterated
-PD and coordination games. Such parameters include mainly local and global connectivity like the degree centrality and
-average clustering coefficient, as well as communication patterns.}\\
+{\color{red}In this work we have analyzed the influence of parameters
+  given by the underlying social structure of a science collaborative
+  network on collective strength of interactions and utility dynamical
+  behavior, based on a class of iterated PD and coordination
+  games. Such parameters include mainly local and global connectivity
+  like the degree centrality and average clustering coefficient, as
+  well as communication patterns.}\\
 
-{\color{red}Under the assumptions given by the model, we were able to notice
-  that, in general, communication within the social
-collaborative networks has a positive correlation with average attachment between the individuals partaking in the games and
-also with the global collective utility (given by the sum of the individual payoffs). The better the
-communication among players, the higher the attachment and the utility leading to an optimized functioning of the whole
-\emph{scientific collaboration system}. This is an important result that may be useful for scientific policy planning
-and may set a foundation for the optimal use of social networks in scientific collaboration as a means to improve the
-relationships among collaborating peers and thus ultimately the performance of research systems. 
-We obviously need more qualitative work in order to validate these results from a sociological and anthropological
-perspective.\\ %Furthermore, such validation is necessary because, as we said at
-             %the beginning of this work, \emph{attachment} can
-             %have many different meanings and implementations in the real
-             %world. The same we can say about \emph{utility} and most of all,
-             %about the very idea of the game we explored here since ``playing
-             %the game'' must have so, many different meanings among resarchers
-             %and their communities.}\\ 
+{\color{red}Under the assumptions given by the model, we were able to
+  notice that, in general, communication within the social
+  collaborative networks has a positive correlation with average
+  strength of interactions between the individuals partaking in the
+  games and also with the global collective utility (given by the sum
+  of the individual payoffs). The better the communication among
+  players, the higher the strength of interactions and the utility
+  leading to an optimized functioning of the whole \emph{scientific
+    collaboration system}. This is an important result that may be
+  useful for scientific policy planning and may set a foundation for
+  the optimal use of social networks in scientific collaboration as a
+  means to improve the relationships among collaborating peers and
+  ultimately the performance of research systems.  We obviously need
+  more qualitative work in order to validate these results from a
+  sociological and anthropological perspective.\\
 
-{\color{red}To close this article, we would like to comment on three issues we consider important. The first one is about
-confronting our results with data available to us from the biomedical research community. Second, some remarks we believe are important
-about the role of computational simulations in the social sciences. Finally we would like to comment on our
-future work.}\\
+%Furthermore, such validation is necessary because, as we said at
+%the beginning of this work, \emph{strength of
+%interactions} can have many different meanings and
+%implementations in the real world. The same we can say
+%about \emph{utility} and most of all, about the idea of the game we
+%explored here since ``playing the
+%game'' must have so, many different meanings among
+%resarchers and their communities.}\\
+
+{\color{red}To close this article, we would like to comment on three
+  issues we consider important. The first one is about confronting our
+  results with data available to us from the biomedical research
+  community. Second, some remarks we believe are important about the
+  role of computational simulations in the social sciences. Finally we
+  would like to comment on our future work.}\\
 
 
-{\color{red}The two main results of our model are the smoothness in the phase transition-like behavior for different parameters and the distribution of utility and attachment in the FOSISS network compared to other networks and their topologies. We are certain that the particular structure of FOSISS network is playing a central role in the results and because of that we would like to discuss it a little bit further.}\\
+{\color{red}The two main results of our model are the smoothness in
+  the phase transition-like behavior for different parameters and the
+  distribution of utility and strength of interactions in the FOSISS
+  network compared to other networks and their topologies. We are
+  certain that the particular structure of FOSISS network is playing a
+  central role in the results and because of that we would like to
+  discuss it a little bit further.}\\
 
-{\color{red}FOSISS network is higly hierarchical according to its heterogeneity of $0.873$. Because of it, one would
-  expect to find the presence of important hubs \cite{Wu-etal2008}, that is, a few researchers control the whole
-  network, as has been reported in some other places \cite{yousefi-etal2008}. Surprisingly, FOSISS network
-  centralization is very low $0.023$, i.e. there are no researchers that centralize the majority of connections. Our
-  guess is that the network is composed of many small communities or groups with a central researcher or Principal
-  Investigator (PI). If this is the case in the FOSISS network, it means that those groups have a very hierarchic structure as well.}\\
+{\color{red}FOSISS network is higly hierarchical according to its
+  heterogeneity of $0.873$. Because of it, one would expect to find
+  the presence of important hubs \cite{Wu-etal2008}, that is, a few
+  researchers control the whole network, as has been reported in some
+  other places \cite{yousefi-etal2008}. Surprisingly, FOSISS network
+  centralization is very low $0.023$, i.e. there are no researchers
+  that centralize the majority of connections. Our guess is that the
+  network is composed of many small communities or groups with a
+  central researcher or Principal Investigator (PI). If this is the
+  case in the FOSISS network, it means that those groups have a very
+  hierarchic structure as well.}\\
 
-{\color{red}Under such structure, when the clustering coefficient is considered, it can be said that groups are also well connected
-but that inter-group connections are sparse. In other words, individual groups are strongly connected but the network
-as a whole is supported by a small number of links. We came by this idea partially from
-another study about scientific collaborations based on co-authorships in one of
-the research centers that is part 
-of the FOSISS network \cite{HernandezLemus2013}. In the cited reference an apparently well integrated community was
-found (high clustering coefficient and a very short characteristic path length). Such integration was mostly
-superficial, since it depended on the presence of external collaborators from other research institutions (most of them from overseas). 
-Removing these external collaborators broke down the network into small subgraphs that worked independently. Remarkably those subgraphs corresponded to the real
-groups of that research center.  What is more, several groups had a hierarchical structure as 
-the one we suspect is common in FOSISS subgraphs. The results showed that collaboration was poor between groups but strong
-among the members of each group, and that collaboration among groups doesn't emerge bottom-up, instead it seems to be promoted from the
-top, from the administrative authorities.}\\ 
+{\color{red}Under such structure, when the clustering coefficient is
+  considered, it can be said that groups are also well connected but
+  that inter-group connections are sparse. In other words, individual
+  groups are strongly connected within but the network as a whole is
+  supported by a small number of links. We came by this idea partially
+  from another study about scientific collaborations based on
+  co-authorships in one of the research centers that is part of the
+  FOSISS network \cite{HernandezLemus2013}. In the cited reference an
+  apparently well integrated community was found (high clustering
+  coefficient and a very short characteristic path length). Such
+  integration was mostly superficial, since it depended on the
+  presence of external collaborators from other research institutions
+  (most of them from overseas).  Removing these external collaborators
+  broke down the network into small subgraphs that worked
+  independently. Remarkably those subgraphs corresponded to the real
+  groups of that research center.  What is more, several groups had a
+  hierarchical structure as the one we suspect is common in FOSISS
+  subgraphs. The results showed that collaboration was poor between
+  groups but strong among the members of each group, and that
+  collaboration among groups doesn't emerge bottom-up, instead it
+  seems to be promoted from the top, from the administrative
+  authorities.}\\
 
-{\color{red}We believe that the the situation just refered is also true for the whole biomedical research community in M\'exico. The
-amount of PIs who have also been collaborators in other projects is about one fifth of the total number of participants.
-This is a number big enough to connect the whole network in one giant component. Yet, due to the topological
-characteristics of the FOSISS network, it appears to be the case that researchers can be the leaders in one project and
-collaborators of different project of \emph{its own research group}. CONACyT's funding policies makes it impossible for a
-researcher to get a grant from a fund if that researcher has an ongoing project with a grant from that same fund. That
-is, a researcher can ask for a grant from FOSISS if and only if at the moment he
-doesn't have a grant from FOSISS already. This
-policy has lead researchers from the same group to ask for grants from the same fund in order to rise their
-budgets. A consequence of this behavior is that group interactions get reinforced, but integroup connections not necessarily so.}\\
+{\color{red}We believe that the the situation just refered is also
+  true for the whole biomedical research community in M\'exico. The
+  amount of PIs who have also been collaborators in other projects is
+  about one fifth of the total number of participants.  This is a
+  number big enough to connect the whole network in one giant
+  component. Yet, due to the topological characteristics of the FOSISS
+  network, it appears to be the case that researchers can be the
+  leaders in one project and collaborators of different project of
+  \emph{its own research group}. CONACyT's funding policies makes it
+  impossible for a researcher to get a grant from a fund if that
+  researcher has an ongoing project with a grant from that same
+  fund. That is, a researcher can ask for a grant from FOSISS if and
+  only if at the moment he doesn't already have one
+  This policy has lead researchers from the same group to ask
+  for grants from the same fund in order to rise their budgets. A
+  consequence of this behavior is that group interactions get
+  reinforced, but integroup connections not necessarily so.}\\
 
-{\color{red}As is common among scientific communities in biomedical research, PIs play a central role in the network. Strong PIs and
-well connected groups seem to be somehow responsible for the high levels of attachment and the centralization of utility in
-our simulation. As for what seems to be phase transitions, in the case of FOSISS networks, these are smoother than
-those in the other networks with different topologies, even for those with a small-world topology. We think that this
-behavior is also the result of the hierarchical structure already mentioned. If this is true, attachment is first lost in the
-edges that link diffrent goups and then in the edges that connect members of the groups. Connections between groups would not
-be as dense as those inside the groups, which means that there would not be enough information of the behavior of one group regarding
-its neighbors to constrain them as it seems to happen with individual researchers inside their communities. Nevertheless,
-if values of the carrying capacity $\nu$ keep increasing and it becomes more
-difficult to strengthen interactions, then attachment begins to diminish inside groups.}\\
+{\color{red}As is common among scientific communities in biomedical
+  research, PIs play a central role in the network. Strong PIs and
+  well connected groups seem to be somehow responsible for the high
+  levels of strength of interactions and the centralization of utility
+  in our simulation. As for what seems to be phase transitions, in the
+  case of FOSISS networks, these are smoother than those in the other
+  networks with different topologies, even for those with a
+  small-world topology. We think that this behavior is also the result
+  of the hierarchical structure already mentioned. If this is true,
+  strength of interactions is first lost in the edges that link
+  diffrent goups and then in the edges that connect members of the
+  groups. Connections between groups would not be as dense as those
+  inside the groups, which means that there would not be enough
+  information of the behavior of one group regarding its neighbors to
+  constrain them as it seems to happen with individual researchers
+  inside their communities. Nevertheless, if values of the carrying
+  capacity $\nu$ keep increasing and it becomes more difficult to
+  strengthen interactions, then strength of interactions begins to
+  diminish inside groups.}\\
 
-{\color{red}Another issue that we would like to mention about FOSISS network topology is that it is not a robust collaboration network.
-At the level of groups, these might be well connected and consolidated but at the level of the network, this could be
-no more than an aggregate of individual groups. A robust network would be resistant to changes in the connections
-between groups but in the case of FOSISS, it seems that the network would brake down into
-small research groups by cutting some edges, as it happened in our co-authorship
-collaboration network \cite{HernandezLemus2013}. The lack of robustness might be 
-indicative of the fact that resources stay inside the groups, that is, they do not circulate through or articulate different communities. For
-example, one may think of certain expensive technologies for genomic research that could be bought once and shared
-among research groups, however, this doesn't seem to happen very often. There are some other
-consequences, such as low communication among groups, atomization of practices and know-hows, redundancy in equipment tenancy,
-difficulties for implementing community-wide infrastructures such as biobanks, etc.}\\ 
+{\color{red}Another issue that we would like to mention about FOSISS
+  network topology is that it is not a robust collaboration network.
+  At the level of groups, these might be well connected and
+  consolidated but at the level of the network, this could be no more
+  than an aggregate of individual groups. A robust network would be
+  resistant to changes in the connections between groups but in the
+  case of FOSISS, it seems that the network would brake down into
+  small research groups by cutting some edges, as it happened in our
+  co-authorship collaboration network \cite{HernandezLemus2013}. The
+  lack of robustness might be indicative of the fact that resources
+  stay inside the groups, that is, they do not circulate through or
+  articulate different communities. For example, one may think of
+  certain expensive technologies for genomic research that could be
+  bought once and shared among research groups, however, this doesn't
+  seem to happen very often. There are some other consequences, such
+  as low communication among groups, atomization of practices and
+  know-hows, redundancy in equipment tenancy, difficulties for
+  implementing community-wide infrastructures such as biobanks,
+  etc.}\\
 
 %% {\color{red}Regarding simulations and social science. We believe that social scientists may learn many lessons from
 %%   computational modeling. Tipically, the use of computational modeling as part of the social sciences
@@ -1021,24 +1085,33 @@ difficulties for implementing community-wide infrastructures such as biobanks, e
 %% of resources and information or that we can expect certain cultural intepretation regarding collaboration due to the
 %% position of researchers in the network. Such hypothesis can be computationally tested too.}\\
 
-{\color{red}On these grounds, part of our future work is based on some of the results presented here. We would like to
-identify researchers in our simulations and corroborate their situation in the model and in the real world. We are
-also interested in going back to the field and interviewing those groups with an interesting behavior found in our
-simulations, probably we would follow a similar strategy as the one developed in \cite{Haraetal2003}. Finding
-communities beyond the level of the groups is an important task. We think that there are many possibilities that emerge
-from the integration of different methodologies. Moreover, studying social processes in science is particularly
-attractive due to the amounts of data already available that can be easily collected. This is a privilege because
-simulations can be designed on real world data, something that only very recently has become possible
-\cite{Barabasi2011}.\\
+{\color{red}On these grounds, part of our future work is based on
+  the results presented here. We would like to identify researchers
+  in our simulations and corroborate their situation in the model and
+  in the real world. We are also interested in going back to the field
+  and interviewing those groups with an interesting behavior found in
+  our simulations, probably we would follow a similar strategy as the
+  one developed in \cite{Haraetal2003}. Finding communities beyond the
+  level of the groups is an important task. We think that there are
+  many possibilities that emerge from the integration of different
+  methodologies. Moreover, studying social processes in science is
+  particularly attractive due to the amounts of data already available
+  that can be easily collected. This is a privilege because
+  simulations can be designed on real world data, something that only
+  very recently has become possible \cite{Barabasi2011}.\\
 
 
-No doubt, social sciences are getting more ``computational''. This can be seen everywhere, but curiously enough,
-disciplines like physicis and computer science are the ones who are moving towards the social sciences and not so much
-the other way around. It might be the case that the pioneering disciplines in the computational social sciences will set
-the agenda, an agenda that will apparently be mostly based on taking advantage of big data and on hypothesis-free approaches. We
-believe that the social sciences have important questions that should be added to that agenda and those questions may not
-be answered only by big data techniques but they may require creating models and simulations in the style of the best
-hypothesis-driven research.} 
+No doubt, social sciences are becoming more ``computational''. This can
+be seen everywhere, but curiously enough, disciplines like physicis
+and computer science are moving towards the social
+sciences and not so much the other way around. It might be the case
+that the pioneering disciplines in the computational social sciences
+will set the agenda, an agenda that will apparently be mostly based on
+taking advantage of big data and on hypothesis-free approaches. We
+believe that the social sciences have important questions that should
+be added to that agenda and those questions may not be answered only
+by big data techniques but they may require creating models and
+simulations in the style of the best hypothesis-driven research.}
  
 %Text with citations \cite{RefB} and \cite{RefJ}.
 %\subsection{Subsection title}
@@ -1089,7 +1162,7 @@ hypothesis-driven research.}
 %\end{table}
 
 
-\section{acknowledgements}
+\section{Acknowledgements}
 The authors gratefully acknowledge support by grants: CB-222220-R/2013 and
 CB-179431/2012 (Consejo Nacional de Ciencia y Tecnolog\'ia). We would also like
 to acknowledge CONACyT for letting us access their database. Finally, we
