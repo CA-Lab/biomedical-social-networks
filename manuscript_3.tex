@@ -63,43 +63,40 @@
 
 \begin{abstract}
 
-  What would happen if researchers in a community were given the same
-  amount of resources and then set free to interact among each other?
-  How would these resources be distributed in the population after
-  many interactions? The final result may be determined by the
-  researchers' social and political power, and by their
-  prestige. Nevertheless, all these attributes depend, to a certain
-  degree, on the research collaboration social network in which
-  scientists are embedded. Here we develop a model based on the
-  Prisoner's Dilemma implemented on a collaboration network. With this
-  model we explore the distribution of resources and the dynamics of
-  the strengthening or weakening of collaboration interactions among
-  partners, as scientists cooperate or defect in order to gain access
-  to resources shared by others. The network is based on data about projects
-  that were awarded with a grant. In this sense, we assume that
-  resources are funds, equipment and time. We define Fitness as how
-  much access a researcher has to the resources of his collegues.  We
-  tested our simulation on the real biomedical research network and
-  compared the results with an Erd\"{o}s-Reny\'i, a Watts-Strogatz
-  small-world and Barab\'asi-Albert topologies. Different topologies
-  display different fitness and connections strength
-  distributions. Moreover, the distribution of fitness and connections
-  strength in the researchers network is similar to that of
-  Barab\'asi-Albert and Watts-Strogatz topologies, respectively. We
-  believe that fitness distribution in the researchers network
-  suggests that there are socio-cultural mechanisms governing the
-  network that produce an asymmetric distribution of resources. The
-  high distribution of strong connections might reflect some sort of
-  subordination among researchers by which they are morally obliged to
-  cooperate by the same socio-cultural mechanisms. The range around
-  the threshold that regulates the decision to cooperate or defect
-  according to the agent's historical balance between utility and
-  strength of collaborative relationships and carrying capacity of the
-  system is small, suggesting that there is a region in which a phase
-  transition takes place from a population of cooperators to a
-  population of defectors. Simulations like this may help to develop
-  science policies to promote fair distribution of resources.
-
+Collaboration has become a cornerstone in biomedical research today.
+In contrast to physics which has a long history and experience in
+collaborative projects, biology is only recently becoming an evermore
+collaborative discipline.
+In this article we explore the effect of a collaboraion network on the distribution
+of players having access to certain amount of resources from other players in the
+network and the distribution of the strength of connections among
+them. Particularly, we implemented two games played simultaneously:
+one for maximazing individual utility based on the iterated Prisoner's
+Dilemma; the other, a coordination game for maximazing the connection strength between
+players. We are interested in how they affect each other in 
+the context of a network of scientific collaboration under the idea that while
+researchers are interested in maximazing their utilities, they also know that
+it is important to invest in building collaborative relationships.
+We tested our simulation on a biomedical research community network of M\'exico. and
+compared the results with an Erd\"{o}s-Reny\'i, a Watts-Strogatz
+small-world and Barab\'asi-Albert topologies. Different topologies
+display different utility and attachment
+distributions. Moreover, the distribution of utility and attachment in the
+researchers network is similar to that of 
+Barab\'asi-Albert and Watts-Strogatz topologies, respectively. We
+believe that utility distribution in the researchers network
+suggests that there are socio-cultural mechanisms governing the
+network that produce an asymmetric distribution of resources. The
+high distribution of strong connections might reflect some sort of
+subordination among researchers by which they are morally obliged to
+cooperate by the same socio-cultural mechanisms. The range around
+the threshold that regulates the decision to cooperate or defect
+according to the agent's historical balance between utility and
+strength of collaborative relationships and carrying capacity of the
+system is small, suggesting that there is a region in which a phase
+transition takes place from a population of cooperators to a
+population of defectors. Simulations like this may help to develop
+science policies to promote fair distribution of resources.
 
 \end{abstract}
 
@@ -239,7 +236,7 @@ to maximize their access to resources while taking care of their collaboration l
   %% improving their profits, even when acting selfishly always could have a
   %% negative impact on that primary objective?}\\  
 
- {\color{red}In this article we explore the network effect on the distribution
+ In this article we explore the network effect on the distribution
    of players having access to certain amount of resources shared by other players in the
    network and the distribution of the strength of interactions among
    them. Particularly, we implemented two games played simultaneously: 
@@ -249,9 +246,9 @@ to maximize their access to resources while taking care of their collaboration l
    the context of a network of scientific collaboration under the idea that while
    researchers are interested in maximazing their utilities, they also know that
    it is important to invest in building collaborative relationships. These two
-   behaviors are explored in a biomedical research community of M\'exico.}\\
+   behaviors are explored in a biomedical research community of M\'exico.\\
 
-{\color{red}In the context of our paper, utility represents
+In the context of our paper, utility represents
   access to resources shared by others.
   The value of the Utility function for a player is the sum of the payoffs of playing
   with its neighbors. The opossing force comes from the other concurrent game: players
@@ -264,16 +261,8 @@ to maximize their access to resources while taking care of their collaboration l
   For our biomedical network, cooperation can be thought of
   as sharing resources such as time, students, equipment, even money. Examples of defection
   to a cooperator are ghost authorship or
-  prestige authorship.
+  prestige authorship.\\
 
-  % TODO: este ejemplo de defection no es nada claro:
-  %
-  % Another example may be a working strategy in which some
-  % members of a team do the work at certain moment, and then another part 
-  % does its part in some other moment in the future --some sort of
-  % reciprocity.
-
-}
 
 
 The manuscript is structured in five sections. First we describe
@@ -489,10 +478,10 @@ or defect depend on a specific strategy, such as the well known
 can modify the weight of the interactions with their neighbors
 \cite{Santos2006}. From a different perspective others have explored the effect
 of different topologies on the emergence of cooperation
-\cite{Santos2005,Hauert2004}. {\color{red}In our model, an agent's decision to cooperate or
+\cite{Santos2005,Hauert2004}. In our model, an agent's decision to cooperate or
 defect depends on a balance between
 utilities and the current strength of its collaboration relationships. Such
-balance reflects the overall success or failure of its strategies}. We
+balance reflects the overall success or failure of its strategies. We
 study the behavior of the system under different topologies, including a
 real-world network.\\  
 
@@ -546,7 +535,7 @@ strength of connections or $W$ is the sum of every pair of agents' links
 $w$. The strength of interaction can 
 be thought as some sort of ``trust''.\\
 
-{\color{red} It should be noted that the same actions or behaviors work for
+It should be noted that the same actions or behaviors work for
   both $u$ and $w$. There are two reasons for this decision in the design of the
 model. The most general one is that we believe that in the real world,
 actions such as cooperating and defecting affect the strength of the interaction
@@ -556,7 +545,7 @@ behaviors. The actions of an agent imply a trade-off in which defecting may
 increase its utility at the expense of its collaborative relationships. If
 collaborators have nourished their relationships, they might be strong enough to
 endure occasional defection. Cooperating may build up relationships but it can be
-expensive for the player.}
+expensive for the player.
 
 \subsection{Network initialization and agent state update}
 
@@ -567,10 +556,10 @@ the other networks.\\
 
 The probability for an agent to cooperate or defect depends on a
 number ($\eta$) that referes to a historical balance between average utility and
-the average strength of the connections with its neigbors.   {\color{red} This is so
+the average strength of the connections with its neigbors. This is so
   because we assume that whatever the result in utility or strength of
   connection, as long as one of them increases, the player will be confident in
-  the strategy followed so far}.\\ 
+  the strategy followed so far.\\ 
 
 
 $\eta$ is calculated as:\\ 
@@ -578,7 +567,7 @@ $\eta$ is calculated as:\\
 
 $\eta_i = \frac{\langle f_i \rangle + \langle w_{ij} \rangle _j}{2}$\\
 
-{\color{red} For the agent to decide whether to cooperate or not, $\eta$ is
+ For the agent to decide whether to cooperate or not, $\eta$ is
   compared to a global threshold $\nu$. If the agents' $\eta$ $>$ $\nu$,
   then the agent will cooperate, otherwise he will be suspicious and will
   defect. $\nu$ is a global parameter that establishes a threshold that an
@@ -586,7 +575,7 @@ $\eta_i = \frac{\langle f_i \rangle + \langle w_{ij} \rangle _j}{2}$\\
   $\eta$ can limit the size of the population of cooperators. Due
   to what the system and the game can offer to agents in terms of utilities and the strength
   of collaboration relationships, $\eta$ represents the carrying capacity of the
-  system for the population of cooperators}.  
+  system for the population of cooperators.\\
 
 
 Our simulation was tested on an Erd\"{o}s-Reny\'i, a
@@ -915,15 +904,15 @@ performance of the whole collaborative research system.\\
 \section{Discussion and Conclusions}
 \label{sec:3}
 
-{\color{red}In this work we have analyzed the influence of parameters
+In this work we have analyzed the influence of parameters
   given by the underlying social structure of a science collaborative
   network on collective strength of interactions and utility dynamical
   behavior, based on a class of iterated PD and coordination
   games. Such parameters include mainly local and global connectivity
   like the degree centrality and average clustering coefficient, as
-  well as communication patterns.}\\
+  well as communication patterns.\\
 
-{\color{red}Under the assumptions given by the model, we were able to
+  Under the assumptions given by the model, we were able to
   notice that, in general, communication within the social
   collaborative networks has a positive correlation with average
   strength of interactions between the individuals partaking in the
@@ -946,25 +935,25 @@ performance of the whole collaborative research system.\\
 %about \emph{utility} and most of all, about the idea of the game we
 %explored here since ``playing the
 %game'' must have so, many different meanings among
-%resarchers and their communities.}\\
+%resarchers and their communities.\\
 
-{\color{red}To close this article, we would like to comment on three
+ To close this article, we would like to comment on three
   issues we consider important. The first one is about confronting our
   results with data available to us from the biomedical research
   community. Second, some remarks we believe are important about the
   role of computational simulations in the social sciences. Finally we
-  would like to comment on our future work.}\\
+  would like to comment on our future work.\\
 
 
-{\color{red}The two main results of our model are the smoothness in
+  The two main results of our model are the smoothness in
   the phase transition-like behavior for different parameters and the
   distribution of utility and strength of interactions in the FOSISS
   network compared to other networks and their topologies. We are
   certain that the particular structure of FOSISS network is playing a
   central role in the results and because of that we would like to
-  discuss it a little bit further.}\\
+  discuss it a little bit further.\\
 
-{\color{red}FOSISS network is higly hierarchical according to its
+  FOSISS network is higly hierarchical according to its
   heterogeneity of $0.873$. Because of it, one would expect to find
   the presence of important hubs \cite{Wu-etal2008}, that is, a few
   researchers control the whole network, as has been reported in some
@@ -974,9 +963,9 @@ performance of the whole collaborative research system.\\
   network is composed of many small communities or groups with a
   central researcher or Principal Investigator (PI). If this is the
   case in the FOSISS network, it means that those groups have a very
-  hierarchic structure as well.}\\
+  hierarchic structure as well.\\
 
-{\color{red}Under such structure, when the clustering coefficient is
+  Under such structure, when the clustering coefficient is
   considered, it can be said that groups are also well connected but
   that inter-group connections are sparse. In other words, individual
   groups are strongly connected within but the network as a whole is
@@ -997,9 +986,9 @@ performance of the whole collaborative research system.\\
   groups but strong among the members of each group, and that
   collaboration among groups doesn't emerge bottom-up, instead it
   seems to be promoted from the top, from the administrative
-  authorities.}\\
+  authorities.\\
 
-{\color{red}We believe that the the situation just refered is also
+  We believe that the the situation just refered is also
   true for the whole biomedical research community in M\'exico. The
   amount of PIs who have also been collaborators in other projects is
   about one fifth of the total number of participants.  This is a
@@ -1015,9 +1004,9 @@ performance of the whole collaborative research system.\\
   This policy has lead researchers from the same group to ask
   for grants from the same fund in order to rise their budgets. A
   consequence of this behavior is that group interactions get
-  reinforced, but integroup connections not necessarily so.}\\
+  reinforced, but integroup connections not necessarily so.\\
 
-{\color{red}As is common among scientific communities in biomedical
+ As is common among scientific communities in biomedical
   research, PIs play a central role in the network. Strong PIs and
   well connected groups seem to be somehow responsible for the high
   levels of strength of interactions and the centralization of utility
@@ -1035,9 +1024,9 @@ performance of the whole collaborative research system.\\
   inside their communities. Nevertheless, if values of the carrying
   capacity $\nu$ keep increasing and it becomes more difficult to
   strengthen interactions, then strength of interactions begins to
-  diminish inside groups.}\\
+  diminish inside groups.\\
 
-{\color{red}Another issue that we would like to mention about FOSISS
+  Another issue that we would like to mention about FOSISS
   network topology is that it is not a robust collaboration network.
   At the level of groups, these might be well connected and
   consolidated but at the level of the network, this could be no more
@@ -1055,7 +1044,7 @@ performance of the whole collaborative research system.\\
   as low communication among groups, atomization of practices and
   know-hows, redundancy in equipment tenancy, difficulties for
   implementing community-wide infrastructures such as biobanks,
-  etc.}\\
+  etc. \\
 
 %% {\color{red}Regarding simulations and social science. We believe that social scientists may learn many lessons from
 %%   computational modeling. Tipically, the use of computational modeling as part of the social sciences
@@ -1085,7 +1074,7 @@ performance of the whole collaborative research system.\\
 %% of resources and information or that we can expect certain cultural intepretation regarding collaboration due to the
 %% position of researchers in the network. Such hypothesis can be computationally tested too.}\\
 
-{\color{red}On these grounds, part of our future work is based on
+On these grounds, part of our future work is based on
   the results presented here. We would like to identify researchers
   in our simulations and corroborate their situation in the model and
   in the real world. We are also interested in going back to the field
@@ -1111,7 +1100,7 @@ taking advantage of big data and on hypothesis-free approaches. We
 believe that the social sciences have important questions that should
 be added to that agenda and those questions may not be answered only
 by big data techniques but they may require creating models and
-simulations in the style of the best hypothesis-driven research.}
+simulations in the style of the best hypothesis-driven research.
  
 %Text with citations \cite{RefB} and \cite{RefJ}.
 %\subsection{Subsection title}
