@@ -66,37 +66,37 @@
 Collaboration has become a cornerstone in biomedical research today.
 In contrast to physics which has a long history and experience in
 collaborative projects, biology is only recently becoming an evermore
-collaborative discipline.
-In this article we explore the effect of a collaboraion network on the distribution
-of players having access to certain amount of resources from other players in the
-network and the distribution of the strength of connections among
-them. Particularly, we implemented two games played simultaneously:
-one for maximazing individual utility based on the iterated Prisoner's
-Dilemma; the other, a coordination game for maximazing the connection strength between
-players. We are interested in how they affect each other in 
-the context of a network of scientific collaboration under the idea that while
-researchers are interested in maximazing their utilities, they also know that
-it is important to invest in building collaborative relationships.
-We tested our simulation on a biomedical research community network of M\'exico. and
-compared the results with an Erd\"{o}s-Reny\'i, a Watts-Strogatz
-small-world and Barab\'asi-Albert topologies. Different topologies
-display different utility and attachment
-distributions. Moreover, the distribution of utility and attachment in the
-researchers network is similar to that of 
-Barab\'asi-Albert and Watts-Strogatz topologies, respectively. We
-believe that utility distribution in the researchers network
-suggests that there are socio-cultural mechanisms governing the
-network that produce an asymmetric distribution of resources. The
-high distribution of strong connections might reflect some sort of
+collaborative discipline.  In this article we explore the effect of
+collaboration on the distribution of players' access to resources from
+other players in the network and the distribution of the strength of
+interactions among them. Particularly, we implemented two games played
+simultaneously: one for maximizing individual utility based on the
+iterated Prisoner's Dilemma; the other, a coordination game for
+maximizing the connection strength between players. We are interested
+in how they affect each other in the context of a network of
+scientific collaboration under the idea that while researchers are
+interested in maximizing their individual utilities, they also know
+that it is important to invest in building collaborative
+relationships.  We tested our simulation on a biomedical research
+community network of M\'exico and compared the results with an
+Erd\"{o}s-Reny\'i, a Watts-Strogatz small-world and Barab\'asi-Albert
+topologies. Different topologies display different utility and
+interaction strength distributions. Moreover, the distribution of
+utility and interaction strength in the researchers network is similar
+to that of Barab\'asi-Albert and Watts-Strogatz topologies,
+respectively. We believe that utility distribution in the researchers
+network suggests that there are socio-cultural mechanisms governing
+the network that produce an asymmetric distribution of resources. The
+high distribution of strong interactions might reflect some sort of
 subordination among researchers by which they are morally obliged to
-cooperate by the same socio-cultural mechanisms. The range around
-the threshold that regulates the decision to cooperate or defect
-according to the agent's historical balance between utility and
-strength of collaborative relationships and carrying capacity of the
-system is small, suggesting that there is a region in which a phase
-transition takes place from a population of cooperators to a
-population of defectors. Simulations like this may help to develop
-science policies to promote fair distribution of resources.
+cooperate by the same socio-cultural mechanisms. The range around the
+threshold that regulates the decision to cooperate or defect according
+to the agent's historical balance between utility and strength of
+collaborative relationships and carrying capacity of the system is
+small, suggesting that there is a region in which a phase transition
+takes place from a population of cooperators to a population of
+defectors. Simulations like this may help to develop science policies
+to promote fair distribution of resources.
 
 \end{abstract}
 
@@ -240,18 +240,18 @@ to maximize their access to resources while taking care of their collaboration l
    of players having access to certain amount of resources shared by other players in the
    network and the distribution of the strength of interactions among
    them. Particularly, we implemented two games played simultaneously: 
-   one for maximazing individual utility based on the iterated Prisoner's
-   Dilemma; the other, a coordination game for maximazing the connection strength between
+   one for maximizing individual utility based on the iterated Prisoner's
+   Dilemma; the other, a coordination game for maximizing the connection strength between
    players. We are interested in how they affect each other in 
    the context of a network of scientific collaboration under the idea that while
-   researchers are interested in maximazing their utilities, they also know that
+   researchers are interested in maximizing their utilities, they also know that
    it is important to invest in building collaborative relationships. These two
    behaviors are explored in a biomedical research community of M\'exico.\\
 
 In the context of our paper, utility represents
   access to resources shared by others.
   The value of the Utility function for a player is the sum of the payoffs of playing
-  with its neighbors. The opossing force comes from the other concurrent game: players
+  with its neighbors. The opposing force comes from the other concurrent game: players
   trying to maximize the strength of their interactions with other players. In the coordinating game
   the best strategy is to adopt the same strategy as the other player, as it pays the most
   regardless of cooperation or defection in the utility game. When
@@ -513,7 +513,7 @@ them defects, the connection gets weaker getting $P$ for the collaborative
 connection being punished. If both agents defect, the value $w$ doesn't change,
 which means that agents didn't interact or that the interaction gets nullified
 $N$. In this game, the best action for any agent is to coordinate with its
-neighbor, either beacuse it wins or because it doesn't loose. \\ 
+neighbor, either because it wins or because it doesn't loose. \\ 
 
 {\bf $w$ pay-off matrix}\\
 
@@ -550,13 +550,13 @@ expensive for the player.
 \subsection{Network initialization and agent state update}
 
 All networks are initialized equally. The number of nodes for every network is 4122, the same as in the FOSISS network.
-The same utility is given to every agent and all edges are asigned the same weight. In the case of the FOSISS
+The same utility is given to every agent and all edges are assigned the same weight. In the case of the FOSISS
 network, edge weight is given by the number of collaborations among researchers, utility remains the same for all nodes as in
 the other networks.\\
 
 The probability for an agent to cooperate or defect depends on a
-number ($\eta$) that referes to a historical balance between average utility and
-the average strength of the connections with its neigbors. This is so
+number ($\eta$) that represents a historical balance between average utility and
+the average strength of the connections with its neighbors. This is so
   because we assume that whatever the result in utility or strength of
   connection, as long as one of them increases, the player will be confident in
   the strategy followed so far.\\ 
@@ -631,7 +631,7 @@ Barb\'asi-Albert networks \cite{Barabasi1999} (scale-free networks) are generate
 \subsection{FOSISS: Biomedical research community network}
 
 The biomedical research network on which we are running our model was generated 
-with data from collaborative projects. Our data was obtained from CONACyT and includes information for twelve years of \textit{FOSISS} grants. Data included names of Principal Investigators, collaborators, research topics, etc. The network we are using here has researchers as nodes and edges represent the connection of two scientists when they colaborate on the same project. Edges are also weighted according to the number of projects shared by any pair of scientists.\\
+with data from collaborative projects. Our data was obtained from CONACyT and includes information for twelve years of \textit{FOSISS} grants. Data included names of Principal Investigators, collaborators, research topics, etc. The network we are using here has researchers as nodes and edges represent the connection of two scientists when they collaborate on the same project. Edges are also weighted according to the number of projects shared by any pair of scientists.\\
 
 
 \section{Results}
@@ -664,7 +664,7 @@ of neighbors of each node is $11.39$ \cite{Shannon2003}.\\
 \begin{figure} [h!]
 \centering
 \includegraphics[scale=0.5]{images/Fosiss_GC_final.png}
-\caption{Bioemdical research collaboration network (FOSISS) giant component.}\label{Fosiss_GC}
+\caption{Biomedical research collaboration network (FOSISS) giant component.}\label{Fosiss_GC}
 \end{figure}
 
 \FloatBarrier
@@ -953,7 +953,7 @@ In this work we have analyzed the influence of parameters
   central role in the results and because of that we would like to
   discuss it a little bit further.\\
 
-  FOSISS network is higly hierarchical according to its
+  FOSISS network is highly hierarchical according to its
   heterogeneity of $0.873$. Because of it, one would expect to find
   the presence of important hubs \cite{Wu-etal2008}, that is, a few
   researchers control the whole network, as has been reported in some
@@ -996,15 +996,15 @@ In this work we have analyzed the influence of parameters
   component. Yet, due to the topological characteristics of the FOSISS
   network, it appears to be the case that researchers can be the
   leaders in one project and collaborators of different project of
-  \emph{its own research group}. CONACyT's funding policies makes it
+  \emph{its own research group}. CONACyT's funding policies make it
   impossible for a researcher to get a grant from a fund if that
   researcher has an ongoing project with a grant from that same
   fund. That is, a researcher can ask for a grant from FOSISS if and
-  only if at the moment he doesn't already have one
+  only if at the moment he doesn't already have one.
   This policy has lead researchers from the same group to ask
   for grants from the same fund in order to rise their budgets. A
   consequence of this behavior is that group interactions get
-  reinforced, but integroup connections not necessarily so.\\
+  reinforced, but intergroup connections not necessarily so.\\
 
  As is common among scientific communities in biomedical
   research, PIs play a central role in the network. Strong PIs and
@@ -1016,7 +1016,7 @@ In this work we have analyzed the influence of parameters
   small-world topology. We think that this behavior is also the result
   of the hierarchical structure already mentioned. If this is true,
   strength of interactions is first lost in the edges that link
-  diffrent goups and then in the edges that connect members of the
+  different groups and then in the edges that connect members of the
   groups. Connections between groups would not be as dense as those
   inside the groups, which means that there would not be enough
   information of the behavior of one group regarding its neighbors to
@@ -1091,7 +1091,7 @@ On these grounds, part of our future work is based on
 
 
 No doubt, social sciences are becoming more ``computational''. This can
-be seen everywhere, but curiously enough, disciplines like physicis
+be seen everywhere, but curiously enough, disciplines like physics
 and computer science are moving towards the social
 sciences and not so much the other way around. It might be the case
 that the pioneering disciplines in the computational social sciences
@@ -1151,7 +1151,7 @@ simulations in the style of the best hypothesis-driven research.
 %\end{table}
 
 
-\section{Acknowledgements}
+\section{Acknowledgments}
 The authors gratefully acknowledge support by grants: CB-222220-R/2013 and
 CB-179431/2012 (Consejo Nacional de Ciencia y Tecnolog\'ia). We would also like
 to acknowledge CONACyT for letting us access their database. Finally, we

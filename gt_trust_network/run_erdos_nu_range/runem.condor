@@ -1,0 +1,409 @@
+# run simulation for a range of nu
+
+executable     = /usr/bin/python
+universe       = vanilla
+
+
+Arguments = ../in_memory_simulation.py --runid $(Cluster).$(Process) --nu 0 --reset none --pickle ../pickles/erdos.pickle
+Error = sim_$(Cluster).$(Process).Error
+queue
+
+Arguments = ../in_memory_simulation.py --runid $(Cluster).$(Process) --nu 0.01 --reset none --pickle ../pickles/erdos.pickle
+Error = sim_$(Cluster).$(Process).Error
+queue
+
+Arguments = ../in_memory_simulation.py --runid $(Cluster).$(Process) --nu 0.02 --reset none --pickle ../pickles/erdos.pickle
+Error = sim_$(Cluster).$(Process).Error
+queue
+
+Arguments = ../in_memory_simulation.py --runid $(Cluster).$(Process) --nu 0.03 --reset none --pickle ../pickles/erdos.pickle
+Error = sim_$(Cluster).$(Process).Error
+queue
+
+Arguments = ../in_memory_simulation.py --runid $(Cluster).$(Process) --nu 0.04 --reset none --pickle ../pickles/erdos.pickle
+Error = sim_$(Cluster).$(Process).Error
+queue
+
+Arguments = ../in_memory_simulation.py --runid $(Cluster).$(Process) --nu 0.05 --reset none --pickle ../pickles/erdos.pickle
+Error = sim_$(Cluster).$(Process).Error
+queue
+
+Arguments = ../in_memory_simulation.py --runid $(Cluster).$(Process) --nu 0.06 --reset none --pickle ../pickles/erdos.pickle
+Error = sim_$(Cluster).$(Process).Error
+queue
+
+Arguments = ../in_memory_simulation.py --runid $(Cluster).$(Process) --nu 0.07 --reset none --pickle ../pickles/erdos.pickle
+Error = sim_$(Cluster).$(Process).Error
+queue
+
+Arguments = ../in_memory_simulation.py --runid $(Cluster).$(Process) --nu 0.08 --reset none --pickle ../pickles/erdos.pickle
+Error = sim_$(Cluster).$(Process).Error
+queue
+
+Arguments = ../in_memory_simulation.py --runid $(Cluster).$(Process) --nu 0.09 --reset none --pickle ../pickles/erdos.pickle
+Error = sim_$(Cluster).$(Process).Error
+queue
+
+Arguments = ../in_memory_simulation.py --runid $(Cluster).$(Process) --nu 0.10 --reset none --pickle ../pickles/erdos.pickle
+Error = sim_$(Cluster).$(Process).Error
+queue
+
+Arguments = ../in_memory_simulation.py --runid $(Cluster).$(Process) --nu 0.11 --reset none --pickle ../pickles/erdos.pickle
+Error = sim_$(Cluster).$(Process).Error
+queue
+
+Arguments = ../in_memory_simulation.py --runid $(Cluster).$(Process) --nu 0.12 --reset none --pickle ../pickles/erdos.pickle
+Error = sim_$(Cluster).$(Process).Error
+queue
+
+Arguments = ../in_memory_simulation.py --runid $(Cluster).$(Process) --nu 0.13 --reset none --pickle ../pickles/erdos.pickle
+Error = sim_$(Cluster).$(Process).Error
+queue
+
+Arguments = ../in_memory_simulation.py --runid $(Cluster).$(Process) --nu 0.14 --reset none --pickle ../pickles/erdos.pickle
+Error = sim_$(Cluster).$(Process).Error
+queue
+
+Arguments = ../in_memory_simulation.py --runid $(Cluster).$(Process) --nu 0.15 --reset none --pickle ../pickles/erdos.pickle
+Error = sim_$(Cluster).$(Process).Error
+queue
+
+Arguments = ../in_memory_simulation.py --runid $(Cluster).$(Process) --nu 0.16 --reset none --pickle ../pickles/erdos.pickle
+Error = sim_$(Cluster).$(Process).Error
+queue
+
+Arguments = ../in_memory_simulation.py --runid $(Cluster).$(Process) --nu 0.17 --reset none --pickle ../pickles/erdos.pickle
+Error = sim_$(Cluster).$(Process).Error
+queue
+
+Arguments = ../in_memory_simulation.py --runid $(Cluster).$(Process) --nu 0.18 --reset none --pickle ../pickles/erdos.pickle
+Error = sim_$(Cluster).$(Process).Error
+queue
+
+Arguments = ../in_memory_simulation.py --runid $(Cluster).$(Process) --nu 0.19 --reset none --pickle ../pickles/erdos.pickle
+Error = sim_$(Cluster).$(Process).Error
+queue
+
+Arguments = ../in_memory_simulation.py --runid $(Cluster).$(Process) --nu 0.20 --reset none --pickle ../pickles/erdos.pickle
+Error = sim_$(Cluster).$(Process).Error
+queue
+
+Arguments = ../in_memory_simulation.py --runid $(Cluster).$(Process) --nu 0.21 --reset none --pickle ../pickles/erdos.pickle
+Error = sim_$(Cluster).$(Process).Error
+queue
+
+Arguments = ../in_memory_simulation.py --runid $(Cluster).$(Process) --nu 0.22 --reset none --pickle ../pickles/erdos.pickle
+Error = sim_$(Cluster).$(Process).Error
+queue
+
+Arguments = ../in_memory_simulation.py --runid $(Cluster).$(Process) --nu 0.23 --reset none --pickle ../pickles/erdos.pickle
+Error = sim_$(Cluster).$(Process).Error
+queue
+
+Arguments = ../in_memory_simulation.py --runid $(Cluster).$(Process) --nu 0.24 --reset none --pickle ../pickles/erdos.pickle
+Error = sim_$(Cluster).$(Process).Error
+queue
+
+Arguments = ../in_memory_simulation.py --runid $(Cluster).$(Process) --nu 0.25 --reset none --pickle ../pickles/erdos.pickle
+Error = sim_$(Cluster).$(Process).Error
+queue
+
+Arguments = ../in_memory_simulation.py --runid $(Cluster).$(Process) --nu 0.26 --reset none --pickle ../pickles/erdos.pickle
+Error = sim_$(Cluster).$(Process).Error
+queue
+
+Arguments = ../in_memory_simulation.py --runid $(Cluster).$(Process) --nu 0.27 --reset none --pickle ../pickles/erdos.pickle
+Error = sim_$(Cluster).$(Process).Error
+queue
+
+Arguments = ../in_memory_simulation.py --runid $(Cluster).$(Process) --nu 0.28 --reset none --pickle ../pickles/erdos.pickle
+Error = sim_$(Cluster).$(Process).Error
+queue
+
+Arguments = ../in_memory_simulation.py --runid $(Cluster).$(Process) --nu 0.29 --reset none --pickle ../pickles/erdos.pickle
+Error = sim_$(Cluster).$(Process).Error
+queue
+
+Arguments = ../in_memory_simulation.py --runid $(Cluster).$(Process) --nu 0.30 --reset none --pickle ../pickles/erdos.pickle
+Error = sim_$(Cluster).$(Process).Error
+queue
+
+Arguments = ../in_memory_simulation.py --runid $(Cluster).$(Process) --nu 0.31 --reset none --pickle ../pickles/erdos.pickle
+Error = sim_$(Cluster).$(Process).Error
+queue
+
+Arguments = ../in_memory_simulation.py --runid $(Cluster).$(Process) --nu 0.32 --reset none --pickle ../pickles/erdos.pickle
+Error = sim_$(Cluster).$(Process).Error
+queue
+
+Arguments = ../in_memory_simulation.py --runid $(Cluster).$(Process) --nu 0.33 --reset none --pickle ../pickles/erdos.pickle
+Error = sim_$(Cluster).$(Process).Error
+queue
+
+Arguments = ../in_memory_simulation.py --runid $(Cluster).$(Process) --nu 0.34 --reset none --pickle ../pickles/erdos.pickle
+Error = sim_$(Cluster).$(Process).Error
+queue
+
+Arguments = ../in_memory_simulation.py --runid $(Cluster).$(Process) --nu 0.35 --reset none --pickle ../pickles/erdos.pickle
+Error = sim_$(Cluster).$(Process).Error
+queue
+
+Arguments = ../in_memory_simulation.py --runid $(Cluster).$(Process) --nu 0.36 --reset none --pickle ../pickles/erdos.pickle
+Error = sim_$(Cluster).$(Process).Error
+queue
+
+Arguments = ../in_memory_simulation.py --runid $(Cluster).$(Process) --nu 0.37 --reset none --pickle ../pickles/erdos.pickle
+Error = sim_$(Cluster).$(Process).Error
+queue
+
+Arguments = ../in_memory_simulation.py --runid $(Cluster).$(Process) --nu 0.38 --reset none --pickle ../pickles/erdos.pickle
+Error = sim_$(Cluster).$(Process).Error
+queue
+
+Arguments = ../in_memory_simulation.py --runid $(Cluster).$(Process) --nu 0.39 --reset none --pickle ../pickles/erdos.pickle
+Error = sim_$(Cluster).$(Process).Error
+queue
+
+Arguments = ../in_memory_simulation.py --runid $(Cluster).$(Process) --nu 0.40 --reset none --pickle ../pickles/erdos.pickle
+Error = sim_$(Cluster).$(Process).Error
+queue
+
+Arguments = ../in_memory_simulation.py --runid $(Cluster).$(Process) --nu 0.41 --reset none --pickle ../pickles/erdos.pickle
+Error = sim_$(Cluster).$(Process).Error
+queue
+
+Arguments = ../in_memory_simulation.py --runid $(Cluster).$(Process) --nu 0.42 --reset none --pickle ../pickles/erdos.pickle
+Error = sim_$(Cluster).$(Process).Error
+queue
+
+Arguments = ../in_memory_simulation.py --runid $(Cluster).$(Process) --nu 0.43 --reset none --pickle ../pickles/erdos.pickle
+Error = sim_$(Cluster).$(Process).Error
+queue
+
+Arguments = ../in_memory_simulation.py --runid $(Cluster).$(Process) --nu 0.44 --reset none --pickle ../pickles/erdos.pickle
+Error = sim_$(Cluster).$(Process).Error
+queue
+
+Arguments = ../in_memory_simulation.py --runid $(Cluster).$(Process) --nu 0.45 --reset none --pickle ../pickles/erdos.pickle
+Error = sim_$(Cluster).$(Process).Error
+queue
+
+Arguments = ../in_memory_simulation.py --runid $(Cluster).$(Process) --nu 0.46 --reset none --pickle ../pickles/erdos.pickle
+Error = sim_$(Cluster).$(Process).Error
+queue
+
+Arguments = ../in_memory_simulation.py --runid $(Cluster).$(Process) --nu 0.47 --reset none --pickle ../pickles/erdos.pickle
+Error = sim_$(Cluster).$(Process).Error
+queue
+
+Arguments = ../in_memory_simulation.py --runid $(Cluster).$(Process) --nu 0.48 --reset none --pickle ../pickles/erdos.pickle
+Error = sim_$(Cluster).$(Process).Error
+queue
+
+Arguments = ../in_memory_simulation.py --runid $(Cluster).$(Process) --nu 0.49 --reset none --pickle ../pickles/erdos.pickle
+Error = sim_$(Cluster).$(Process).Error
+queue
+
+Arguments = ../in_memory_simulation.py --runid $(Cluster).$(Process) --nu 0.50 --reset none --pickle ../pickles/erdos.pickle
+Error = sim_$(Cluster).$(Process).Error
+queue
+
+Arguments = ../in_memory_simulation.py --runid $(Cluster).$(Process) --nu 0.51 --reset none --pickle ../pickles/erdos.pickle
+Error = sim_$(Cluster).$(Process).Error
+queue
+
+Arguments = ../in_memory_simulation.py --runid $(Cluster).$(Process) --nu 0.52 --reset none --pickle ../pickles/erdos.pickle
+Error = sim_$(Cluster).$(Process).Error
+queue
+
+Arguments = ../in_memory_simulation.py --runid $(Cluster).$(Process) --nu 0.53 --reset none --pickle ../pickles/erdos.pickle
+Error = sim_$(Cluster).$(Process).Error
+queue
+
+Arguments = ../in_memory_simulation.py --runid $(Cluster).$(Process) --nu 0.54 --reset none --pickle ../pickles/erdos.pickle
+Error = sim_$(Cluster).$(Process).Error
+queue
+
+Arguments = ../in_memory_simulation.py --runid $(Cluster).$(Process) --nu 0.55 --reset none --pickle ../pickles/erdos.pickle
+Error = sim_$(Cluster).$(Process).Error
+queue
+
+Arguments = ../in_memory_simulation.py --runid $(Cluster).$(Process) --nu 0.56 --reset none --pickle ../pickles/erdos.pickle
+Error = sim_$(Cluster).$(Process).Error
+queue
+
+Arguments = ../in_memory_simulation.py --runid $(Cluster).$(Process) --nu 0.57 --reset none --pickle ../pickles/erdos.pickle
+Error = sim_$(Cluster).$(Process).Error
+queue
+
+Arguments = ../in_memory_simulation.py --runid $(Cluster).$(Process) --nu 0.58 --reset none --pickle ../pickles/erdos.pickle
+Error = sim_$(Cluster).$(Process).Error
+queue
+
+Arguments = ../in_memory_simulation.py --runid $(Cluster).$(Process) --nu 0.59 --reset none --pickle ../pickles/erdos.pickle
+Error = sim_$(Cluster).$(Process).Error
+queue
+
+Arguments = ../in_memory_simulation.py --runid $(Cluster).$(Process) --nu 0.60 --reset none --pickle ../pickles/erdos.pickle
+Error = sim_$(Cluster).$(Process).Error
+queue
+
+Arguments = ../in_memory_simulation.py --runid $(Cluster).$(Process) --nu 0.61 --reset none --pickle ../pickles/erdos.pickle
+Error = sim_$(Cluster).$(Process).Error
+queue
+
+Arguments = ../in_memory_simulation.py --runid $(Cluster).$(Process) --nu 0.62 --reset none --pickle ../pickles/erdos.pickle
+Error = sim_$(Cluster).$(Process).Error
+queue
+
+Arguments = ../in_memory_simulation.py --runid $(Cluster).$(Process) --nu 0.63 --reset none --pickle ../pickles/erdos.pickle
+Error = sim_$(Cluster).$(Process).Error
+queue
+
+Arguments = ../in_memory_simulation.py --runid $(Cluster).$(Process) --nu 0.64 --reset none --pickle ../pickles/erdos.pickle
+Error = sim_$(Cluster).$(Process).Error
+queue
+
+Arguments = ../in_memory_simulation.py --runid $(Cluster).$(Process) --nu 0.65 --reset none --pickle ../pickles/erdos.pickle
+Error = sim_$(Cluster).$(Process).Error
+queue
+
+Arguments = ../in_memory_simulation.py --runid $(Cluster).$(Process) --nu 0.66 --reset none --pickle ../pickles/erdos.pickle
+Error = sim_$(Cluster).$(Process).Error
+queue
+
+Arguments = ../in_memory_simulation.py --runid $(Cluster).$(Process) --nu 0.67 --reset none --pickle ../pickles/erdos.pickle
+Error = sim_$(Cluster).$(Process).Error
+queue
+
+Arguments = ../in_memory_simulation.py --runid $(Cluster).$(Process) --nu 0.68 --reset none --pickle ../pickles/erdos.pickle
+Error = sim_$(Cluster).$(Process).Error
+queue
+
+Arguments = ../in_memory_simulation.py --runid $(Cluster).$(Process) --nu 0.69 --reset none --pickle ../pickles/erdos.pickle
+Error = sim_$(Cluster).$(Process).Error
+queue
+
+Arguments = ../in_memory_simulation.py --runid $(Cluster).$(Process) --nu 0.70 --reset none --pickle ../pickles/erdos.pickle
+Error = sim_$(Cluster).$(Process).Error
+queue
+
+Arguments = ../in_memory_simulation.py --runid $(Cluster).$(Process) --nu 0.71 --reset none --pickle ../pickles/erdos.pickle
+Error = sim_$(Cluster).$(Process).Error
+queue
+
+Arguments = ../in_memory_simulation.py --runid $(Cluster).$(Process) --nu 0.72 --reset none --pickle ../pickles/erdos.pickle
+Error = sim_$(Cluster).$(Process).Error
+queue
+
+Arguments = ../in_memory_simulation.py --runid $(Cluster).$(Process) --nu 0.73 --reset none --pickle ../pickles/erdos.pickle
+Error = sim_$(Cluster).$(Process).Error
+queue
+
+Arguments = ../in_memory_simulation.py --runid $(Cluster).$(Process) --nu 0.74 --reset none --pickle ../pickles/erdos.pickle
+Error = sim_$(Cluster).$(Process).Error
+queue
+
+Arguments = ../in_memory_simulation.py --runid $(Cluster).$(Process) --nu 0.75 --reset none --pickle ../pickles/erdos.pickle
+Error = sim_$(Cluster).$(Process).Error
+queue
+
+Arguments = ../in_memory_simulation.py --runid $(Cluster).$(Process) --nu 0.76 --reset none --pickle ../pickles/erdos.pickle
+Error = sim_$(Cluster).$(Process).Error
+queue
+
+Arguments = ../in_memory_simulation.py --runid $(Cluster).$(Process) --nu 0.77 --reset none --pickle ../pickles/erdos.pickle
+Error = sim_$(Cluster).$(Process).Error
+queue
+
+Arguments = ../in_memory_simulation.py --runid $(Cluster).$(Process) --nu 0.78 --reset none --pickle ../pickles/erdos.pickle
+Error = sim_$(Cluster).$(Process).Error
+queue
+
+Arguments = ../in_memory_simulation.py --runid $(Cluster).$(Process) --nu 0.79 --reset none --pickle ../pickles/erdos.pickle
+Error = sim_$(Cluster).$(Process).Error
+queue
+
+Arguments = ../in_memory_simulation.py --runid $(Cluster).$(Process) --nu 0.80 --reset none --pickle ../pickles/erdos.pickle
+Error = sim_$(Cluster).$(Process).Error
+queue
+
+Arguments = ../in_memory_simulation.py --runid $(Cluster).$(Process) --nu 0.81 --reset none --pickle ../pickles/erdos.pickle
+Error = sim_$(Cluster).$(Process).Error
+queue
+
+Arguments = ../in_memory_simulation.py --runid $(Cluster).$(Process) --nu 0.82 --reset none --pickle ../pickles/erdos.pickle
+Error = sim_$(Cluster).$(Process).Error
+queue
+
+Arguments = ../in_memory_simulation.py --runid $(Cluster).$(Process) --nu 0.83 --reset none --pickle ../pickles/erdos.pickle
+Error = sim_$(Cluster).$(Process).Error
+queue
+
+Arguments = ../in_memory_simulation.py --runid $(Cluster).$(Process) --nu 0.84 --reset none --pickle ../pickles/erdos.pickle
+Error = sim_$(Cluster).$(Process).Error
+queue
+
+Arguments = ../in_memory_simulation.py --runid $(Cluster).$(Process) --nu 0.85 --reset none --pickle ../pickles/erdos.pickle
+Error = sim_$(Cluster).$(Process).Error
+queue
+
+Arguments = ../in_memory_simulation.py --runid $(Cluster).$(Process) --nu 0.86 --reset none --pickle ../pickles/erdos.pickle
+Error = sim_$(Cluster).$(Process).Error
+queue
+
+Arguments = ../in_memory_simulation.py --runid $(Cluster).$(Process) --nu 0.87 --reset none --pickle ../pickles/erdos.pickle
+Error = sim_$(Cluster).$(Process).Error
+queue
+
+Arguments = ../in_memory_simulation.py --runid $(Cluster).$(Process) --nu 0.88 --reset none --pickle ../pickles/erdos.pickle
+Error = sim_$(Cluster).$(Process).Error
+queue
+
+Arguments = ../in_memory_simulation.py --runid $(Cluster).$(Process) --nu 0.89 --reset none --pickle ../pickles/erdos.pickle
+Error = sim_$(Cluster).$(Process).Error
+queue
+
+Arguments = ../in_memory_simulation.py --runid $(Cluster).$(Process) --nu 0.90 --reset none --pickle ../pickles/erdos.pickle
+Error = sim_$(Cluster).$(Process).Error
+queue
+
+Arguments = ../in_memory_simulation.py --runid $(Cluster).$(Process) --nu 0.91 --reset none --pickle ../pickles/erdos.pickle
+Error = sim_$(Cluster).$(Process).Error
+queue
+
+Arguments = ../in_memory_simulation.py --runid $(Cluster).$(Process) --nu 0.92 --reset none --pickle ../pickles/erdos.pickle
+Error = sim_$(Cluster).$(Process).Error
+queue
+
+Arguments = ../in_memory_simulation.py --runid $(Cluster).$(Process) --nu 0.93 --reset none --pickle ../pickles/erdos.pickle
+Error = sim_$(Cluster).$(Process).Error
+queue
+
+Arguments = ../in_memory_simulation.py --runid $(Cluster).$(Process) --nu 0.94 --reset none --pickle ../pickles/erdos.pickle
+Error = sim_$(Cluster).$(Process).Error
+queue
+
+Arguments = ../in_memory_simulation.py --runid $(Cluster).$(Process) --nu 0.95 --reset none --pickle ../pickles/erdos.pickle
+Error = sim_$(Cluster).$(Process).Error
+queue
+
+Arguments = ../in_memory_simulation.py --runid $(Cluster).$(Process) --nu 0.96 --reset none --pickle ../pickles/erdos.pickle
+Error = sim_$(Cluster).$(Process).Error
+queue
+
+Arguments = ../in_memory_simulation.py --runid $(Cluster).$(Process) --nu 0.97 --reset none --pickle ../pickles/erdos.pickle
+Error = sim_$(Cluster).$(Process).Error
+queue
+
+Arguments = ../in_memory_simulation.py --runid $(Cluster).$(Process) --nu 0.98 --reset none --pickle ../pickles/erdos.pickle
+Error = sim_$(Cluster).$(Process).Error
+queue
+
+Arguments = ../in_memory_simulation.py --runid $(Cluster).$(Process) --nu 0.99 --reset none --pickle ../pickles/erdos.pickle
+Error = sim_$(Cluster).$(Process).Error
+queue
+
+Arguments = ../in_memory_simulation.py --runid $(Cluster).$(Process) --nu 1 --reset none --pickle ../pickles/erdos.pickle
+Error = sim_$(Cluster).$(Process).Error
+queue

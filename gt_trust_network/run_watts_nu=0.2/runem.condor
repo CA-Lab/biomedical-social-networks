@@ -1,0 +1,7 @@
+# run 100 simulations for nu = 0.20
+
+executable     = /usr/bin/python
+Arguments = ../in_memory_simulation.py --runid $(Cluster).$(Process) --nu 0.20 --reset states --pickle ../pickles/watts.pickle
+universe       = vanilla
+Error = sim_$(Cluster).$(Process).Error
+queue 100
