@@ -581,7 +581,7 @@ collaborators have nourished their relationships, they might be strong enough to
 endure occasional defection. Cooperating may build up relationships but it can be
 expensive for the player.
 
-\subsection*{Network initialization and agent state update}
+\subsection*{Model update}
 
 All networks are initialized equally. The number of nodes for every
 network is 4,122, the same as in the FOSISS network.  The same utility
@@ -596,14 +596,14 @@ utility and the average strength of the connections with its
 neighbors. It is modeled so because we assume that whatever the result
 in utility or strength of interaction, as long as one of them
 increases, the player will be confident in the strategy followed so
-far. In every simulation step, each player will play both games with
-every neighbor, but set its decision to cooperate or defect beforehand
+far. In every simulation step, each agent will independently play both games with
+every neighbor. Nonetheless, the agent sets its decision to cooperate or defect beforehand
 by assessing the overall situation of its relationships. This may
 sound odd, since one may think that a person decides for each
 relationship separately. However in this way players are optimizing
 access to resources and the strength of interactions to their
 neighbors at the same time, since their state is set by
-considering both together.\\
+considering both together. The strength of interaction is updated independently for each pair of agents.  In a single play some interactions might be weakened, some may get strengthened and others may remain unaffected. Moreover, in this model, history is kept in the network as strength of interactions and it conditions the agent\'s disposition to cooperate or to defect. As the sayings go: Burnt children dread fire; A bad dog is not born but made.\\
 
 
 $\eta$ is calculated as:\\ 
