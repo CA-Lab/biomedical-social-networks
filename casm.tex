@@ -203,7 +203,7 @@ collaborative projects, biology is only recently becoming an evermore
 collaborative discipline.
 In this article we explore the effect of a collaboration network on the distribution
 of players having access to certain amount of resources from other players in the
-network and the distribution of the strength of connections among
+network and the distribution of the strength of interactions among
 them. Particularly, we implemented two games played simultaneously:
 one for maximizing individual utility based on the iterated Prisoner's
 Dilemma; the other, a coordination game for maximizing the connection strength
@@ -559,9 +559,9 @@ neighbor, either because it wins or because it doesn't lose. \\
 After each game, the agent adds up utility ($u$), which is the sum of the
 payoffs following the PD matrix. A pair of neighbors will add or substract from the strength of
 their interaction ($w_{ji}$) as they coordinate or not, being $w$
-also cumulative. We measure global utility and connection strength for the whole
+also cumulative. We measure global utility and strength of interaction for the whole
 network. Global utility $U$ is the sum of all individual utilities and global
-strength of connections or $W$ is the sum of every pair of agents' links
+strength of interaction or $W$ is the sum of every pair of agents' links
 $w$. The strength of interaction can be thought of as some sort of ``trust''.\\
 
 
@@ -590,7 +590,7 @@ The probability for an agent to cooperate or defect depends on a
 number ($\eta$) that refers to a historical balance between average
 utility and the average strength of the connections with its
 neighbors. It is modeled so because we assume that whatever the result
-in utility or strength of connection, as long as one of them
+in utility or strength of interaction, as long as one of them
 increases, the player will be confident in the strategy followed so
 far. In every simulation step, each player will play both games with
 every neighbor, but set its decision to cooperate or defect beforehand
@@ -627,7 +627,7 @@ behavior simultaneously. \\
 
 We ran two different experiments. In the first one we simulated different
 values of carrying capacity $\nu$. With this experiment we were able
-to see how the number of cooperators, utility, strength of connections
+to see how the number of cooperators, utility, strength of interactions
 among agents and the ratio of shifting state population would change
 in the range of the carrying capacity. The states of the agents were
 the same at initialization, for all values of the carrying
