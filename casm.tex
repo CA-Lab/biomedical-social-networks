@@ -328,6 +328,7 @@ different scenarios for Nash equilibria \cite{Hanauske-etal:2012}. Prisoner's Di
 has been used in the study of impact factor and collaboration
 \cite{Hara-etal:2003,LiebermanNowak:2005}. \\  
 
+
 Even with all these research efforts, cooperation in the context of
 scientific collaboration is still loosely defined and the long term
 dynamics of academic cooperation (and its consequences) are yet to be
@@ -341,10 +342,21 @@ to our current understanding on the matter, especially when agents have
 to maximize their access to resources while taking care of their collaboration links.\\
   
 
- In this article we explore the network effect on the distribution
+ We explore the network effect on the distribution
    of players having access to certain amount of resources shared by other players in the
    network and the distribution of the strength of interactions among
-   them. Particularly, we implemented two games played simultaneously: 
+   them. Implementing games on networks is an active area of
+research aimed to understand the evolution of cooperation in networks populated
+by selfish agents \cite{SzaboFath:2007,Nowak-etal:92,OshtukiNowak:2006,Santos-etal:2005,Santos-etal:2006}. In many network models in which some game theory games are simulated, agents' decision to cooperate
+or defect depend on a specific strategy, such as the well known
+\textit{tit-for-tat} \cite{Axelrod:2006,Nowak-etal:2011}. In some other cases, agents
+can modify the weight of the interactions with their neighbors
+\cite{Santos-etal:2006}. From a different perspective others have explored the effect
+of different topologies on the emergence of cooperation
+\cite{Santos-etal:2005,HauertDoebeli:2004}. 
+   
+   
+   Particularly, we implemented two games played simultaneously: 
    one for maximizing individual utility based on the iterated Prisoner's
    Dilemma; the other, a coordination game for maximizing the connection strength between
    players. We are interested in how they affect each other in 
@@ -493,16 +505,7 @@ resources become fundamental tools for establishing fruitful collaborations.
 
 Our model is based on the iterated version of the Prisoner's Dilemma (PD) and a
 coordination game instantiated on
-networks. Implementing games on networks is not new and it's an active area of
-research aimed to understand the evolution of cooperation in networks populated
-by selfish agents \cite{SzaboFath:2007,Nowak-etal:92,OshtukiNowak:2006,Santos-etal:2005,Santos-etal:2006}. In many network models
-in which some game theory games are simulated, agents' decision to cooperate
-or defect depend on a specific strategy, such as the well known
-\textit{tit-for-tat} \cite{Axelrod:2006,Nowak-etal:2011}. In some other cases, agents
-can modify the weight of the interactions with their neighbors
-\cite{Santos-etal:2006}. From a different perspective others have explored the effect
-of different topologies on the emergence of cooperation
-\cite{Santos-etal:2005,HauertDoebeli:2004}. In our model, an agent's decision to
+networks. In our model, an agent's decision to
 cooperate or defect depends on a balance between
 utilities and the current strength of its collaboration relationships. Such
 balance reflects the overall success or failure of its strategies. We
