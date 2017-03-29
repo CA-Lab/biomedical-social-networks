@@ -318,62 +318,88 @@ The analysis of cooperation in scientific research has been the subject of a
 number of studies
 \cite{VermeulenPenders:2013,Newman:2001,Newman:2004,Elango-etal:2012,HernandezLemus:2013,Strasser:2006,Strasser:2012}. This
 is not surprising since cooperation and competition are quite important in
-today's academic success. How does collaboration happen within a competitive
-academic environment and what kind of payoff is present in these settings were
-questions considered recently by Wardil and Hauert \cite{Wardil-etal:2015} in the
-context of cooperation in multi-authored publications. Also, the role of game
-theory over complex scientific information and collaboration networks has
-attracted attention, mainly focusing on how long-term strategies may shape
-different scenarios for Nash equilibria \cite{Hanauske-etal:2012}. Prisoner's Dilemma
-has been used in the study of impact factor and collaboration
-\cite{Hara-etal:2003,LiebermanNowak:2005}. \\  
+today's academic success. Moreover, the quantitative analysis of cooperation in
+science also has a long history of more than 50 years
+\cite{Mali-etal:2012,Scharnhorst-etal:2012}. Particularly appealing to researchers studying
+this topic has been the use of network analysis, especially in the area of
+bibliometrics and scientometrics. The approach we follow here articulates game theory
+together with complex network analysis. Putting together game-theoretic modeling
+on complex networks is common in studies about the emergence of cooperation
+\cite{SzaboFath:2007,Nowak-etal:92,OshtukiNowak:2006,Santos-etal:2005,Santos-etal:2006}.
+However, in the context of science studies, it is far from being a unified, active
+field of research. There is no common set of questions and problems or a
+coherent body of models and theory aimed to understand the quirks and twists of
+cooperation in scientific communities. It is more likely to say that there is a
+desarticulated collection of works, implementing game theory and
+complex networks to different situations related to the social life of science.\\
+
+Nevertheless, there is work done. For instance Wardil and Hauert have analyzed
+how does collaboration happen within co-authorship networks
+\cite{Wardil-etal:2015}. Using the \emph{Physical Review} journal historic database,
+these authors show the payoff differences between being the first author and the
+last author, where the first author is a cooperator that takes the highest load
+of work, while the last author is the \emph{laird} that can benefit from the
+work of the former and get engaged in many other projects. They argue that
+cooperation in a multi-authored paper resambles more to a snow-drift game than a
+prisoner's dilemma situation, since when co-authoring a paper, every body wins
+but each author pays a different price. Though this work takes into account the
+topology of the network as informative regarding cooperation patterns, the role
+of topology framing or
+fostering cooperation is not part of the study. \\
+
+Game theory over complex scientific information and collaboration networks has
+also attracted attention, for instance Hanauske has focused on how long-term
+strategies may shape different scenarios for Nash equilibria in the interaction
+between scientists and journals \cite{Hanauske-etal:2012}. And Hara and
+collaborators have used Prisoner's Dilemma in the study of impact factor and
+collaboration \cite{Hara-etal:2003,LiebermanNowak:2005}. \\
+
+% In general and beyond the area of scientific collaboration,
+% implementing games on networks is an active area of research aimed to understand
+% the evolution of cooperation in networks populated by selfish agents
+% \cite{SzaboFath:2007,Nowak-etal:92,OshtukiNowak:2006,Santos-etal:2005,Santos-etal:2006},
+% for example, by exploring different games such as the prisoner's dilemma,
+% snow-drift, etc., \cite{Axelrod:2006,Nowak-etal:2011}, or implementing models in
+% which agents can modify the weight of the interactions with their neighbors
+% \cite{Santos-etal:2006}. \\
 
 
-Even with all these research efforts, cooperation in the context of
-scientific collaboration is still loosely defined and the long term
-dynamics of academic cooperation (and its consequences) are yet to be
-fully elucidated. Furthermore, to our current knowledge, there has
-been no use of game theory and complex network analysis for
-understanding how the topology of scientific collaboration networks
-affects access to resources among individuals present in the network
-\footnote{For an account of scientific collaboration and definitions,
-  please refer to \cite{Sonnenwald:2007}.}. Our work aims to contribute
-to our current understanding on the matter, especially when agents have
-to maximize their access to resources while taking care of their collaboration links.\\
-  
+Even with all these research efforts, cooperation in the context of scientific
+collaboration is still loosely defined and the long term dynamics of academic
+cooperation (and its consequences) are yet to be fully elucidated. Furthermore,
+to our current knowledge, there has been no use of game theory and complex
+network analysis for understanding how the topology of scientific collaboration
+networks affects access to resources among individuals present in the network
+\footnote{For an account of scientific collaboration and definitions, please
+  refer to \cite{Sonnenwald:2007}.}. From a different perspective others have
+explored the effect of different topologies on the emergence of cooperation
+\cite{Santos-etal:2005,HauertDoebeli:2004}. Our work aims to contribute to our
+current understanding on the matter, especially when agents have to maximize
+their access to resources while taking care of their collaboration links. We
+explore the network effect on the distribution of players having access to
+certain amount of resources shared by other players in the network and the
+distribution of the strength of interactions among them. Particularly, we
+implemented two games played simultaneously: one for maximizing individual
+utility based on the iterated Prisoner's Dilemma; the other, a coordination game
+for maximizing the connection strength between players. We are interested in how
+they affect each other in the context of a network of scientific collaboration
+under the idea that while researchers are interested in maximizing their
+utilities, they also know that it is important to invest in building
+collaborative relationships. These two behaviors are explored in a biomedical
+research community in M\'exico.\\ 
 
- We explore the network effect on the distribution
-   of players having access to certain amount of resources shared by other players in the
-   network and the distribution of the strength of interactions among
-   them. Implementing games on networks is an active area of
-research aimed to understand the evolution of cooperation in networks populated
-by selfish agents \cite{SzaboFath:2007,Nowak-etal:92,OshtukiNowak:2006,Santos-etal:2005,Santos-etal:2006}. In many network models in which some game theory games are simulated, agents' decision to cooperate
-or defect depend on a specific strategy, such as the well known
-\textit{tit-for-tat} \cite{Axelrod:2006,Nowak-etal:2011}. In some other cases, agents
-can modify the weight of the interactions with their neighbors
-\cite{Santos-etal:2006}. From a different perspective others have explored the effect
-of different topologies on the emergence of cooperation
-\cite{Santos-etal:2005,HauertDoebeli:2004}. 
-   
-   
-   Particularly, we implemented two games played simultaneously: 
-   one for maximizing individual utility based on the iterated Prisoner's
-   Dilemma; the other, a coordination game for maximizing the connection strength between
-   players. We are interested in how they affect each other in 
-   the context of a network of scientific collaboration under the idea that while
-   researchers are interested in maximizing their utilities, they also know that
-   it is important to invest in building collaborative relationships. These two
-   behaviors are explored in a biomedical research community in M\'exico.\\
-
-In the context of our model, utility represents
-  access to resources shared by others.
-  The value of the utility function for a player is the sum of the payoffs of playing
-  prisoner\'s dilemma with its neighbors. The the other concurrent game consists of players
-  trying to maximize the strength of their interactions with other players. In the coordination game the best strategy is to adopt the same strategy as the other player, as it pays the most,
-  regardless of cooperation or defection in the utility game. When
-  both cooperate the interaction gets a positive payoff, when both defect, the
-  interaction doesn't get affected; but if they do not coordinate, then the
-  interaction loses. The payoffs resulting from the coordination games are not part of the utility function, however, both are considered by the agent to decide whether to cooperate or defect. \\
+   In the context of our model, utility represents access to resources shared by
+   others.  The value of the utility function for a player is the sum of the
+   payoffs of playing prisoner's dilemma with its neighbors. The other
+   concurrent game consists of players trying to maximize the strength of their
+   interactions with other players. In the coordination game the best strategy
+   is to adopt the same strategy as the other player, as it pays the most,
+   regardless of cooperation or defection in the utility game. When both
+   cooperate the interaction gets a positive payoff, when both defect, the
+   interaction doesn't get affected; but if they do not coordinate, then the
+   interaction loses. The payoffs resulting from the coordination games are not
+   part of the utility function, however, both are considered by the agent to
+   decide whether to cooperate or defect. \\ 
 
 
 The manuscript is structured in four sections. First we describe
@@ -1223,7 +1249,7 @@ simulations in the style of the best hypothesis-driven research.
     supervised its analysis and edited the manuscript. 
 
 \section*{Acknowledgments}
-    We acknowledge the help of Francisco Allende for his work curating 
+    We acknowledge the help of Ma. del Pilar Galarza and Francisco Allende for their work curating 
 databases of researchers. We acknowledge Be Luecke for her critical review.
 
 \section*{Funding}
