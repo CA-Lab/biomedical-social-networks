@@ -200,37 +200,38 @@
 Collaboration has become a cornerstone in biomedical research today.
 In contrast to physics which has a long history and experience in
 collaborative projects, biology is only recently becoming an evermore
-collaborative discipline.
-In this article we explore the effect of a collaboration network on the distribution
-of players having access to certain amount of resources from other players in the
-network and the distribution of the strength of interactions among
-them. Particularly, we implemented two games played simultaneously:
-one for maximizing individual utility based on the iterated Prisoner's
-Dilemma; the other, a coordination game for maximizing the connection strength
-between players. We are interested in how they affect each other in 
-the context of a network of scientific collaboration under the idea that while
-researchers are interested in maximizing their utilities, they also know that
-it is important to invest in building collaborative relationships.
-We tested our simulation on a biomedical research community network in M\'exico and
-compared the results with an Erd\"{o}s-Reny\'i, a Watts-Strogatz
-small-world and Barab\'asi-Albert topologies. Different topologies
-display different global utility and global strength of interaction
-distributions. Moreover, the distribution of utility and strength of interaction
-in the researchers network is similar to that of 
+collaborative discipline.  In this article we explore the effect of a
+collaboration network on the distribution of players having access to
+certain amount of resources from other players in the network and the
+distribution of the strength of interactions among them. Particularly,
+we implemented two games played simultaneously: one for maximizing
+individual utility based on the iterated Prisoner's Dilemma; the
+other, a coordination game for maximizing the connection strength
+between players. We are interested in how they affect each other in
+the context of a network of scientific collaboration under the idea
+that while researchers are interested in maximizing their utilities,
+they also know that it is important to invest in building
+collaborative relationships.  We tested our simulation on a biomedical
+research community network in M\'exico and compared the results with
+an Erd\"{o}s-Reny\'i, a Watts-Strogatz small-world and
+Barab\'asi-Albert topologies. Different topologies display different
+global utility and global strength of interaction
+distributions. Moreover, the distribution of utility and strength of
+interaction in the researchers network is similar to that of
 Barab\'asi-Albert and Watts-Strogatz topologies, respectively. We
-believe that utility distribution in the researchers network
-suggests that there are socio-cultural mechanisms governing the
-network that produce an asymmetric distribution of resources. The
-high distribution of strong connections might reflect some sort of
-subordination among researchers by which they are morally obliged to
-cooperate by the same socio-cultural mechanisms. Finally, the range around
-the threshold that regulates the decision to cooperate or defect
-according to the agent's historical balance between utility and
-strength of collaborative relationships and carrying capacity of the
-system is small, suggesting that there is a region in which a phase
-transition takes place from a population of cooperators to a
-population of defectors. Simulations like ours may help to develop
-science policies to promote fair distribution of resources.
+believe that utility distribution in the researchers network suggests
+that there are socio-cultural mechanisms governing the network that
+produce an asymmetric distribution of resources. The high distribution
+of strong connections might reflect some sort of subordination among
+researchers by which they are morally obliged to cooperate by the same
+socio-cultural mechanisms. Finally, the range around the threshold
+that regulates the decision to cooperate or defect according to the
+agent's historical balance between utility and strength of
+collaborative relationships and carrying capacity of the system is
+small, suggesting that there is a region in which a phase transition
+takes place from a population of cooperators to a population of
+defectors. Simulations like ours may help to develop science policies
+to promote fair distribution of resources.
 
 %\parttitle{Second part title} %if any
 \end{abstract}
@@ -311,76 +312,87 @@ forms, from sharing of biological samples and biobanking to
 international groups in charge of helping research communities to
 harmonize and share their data. Sharing resources such as equipment,
 funds, and time is critical; building trust among scientists is
-fundamental. Also, resources are mobilized in order to create strategic alliances.\\
+fundamental. Also, resources are mobilized in order to create
+strategic alliances.\\
 
 
-The analysis of cooperation in scientific research has been the subject of a
-number of studies
+The analysis of cooperation in scientific research has been the
+subject of a number of studies
 \cite{VermeulenPenders:2013,Newman:2001,Newman:2004,Elango-etal:2012,HernandezLemus:2013,Strasser:2006,Strasser:2012}. This
-is not surprising since cooperation and competition are quite important in
-today's academic success. Moreover, the quantitative analysis of cooperation in
-science also has a long history of more than 50 years
+is not surprising since cooperation and competition are quite
+important in today's academic success. Moreover, the quantitative
+analysis of cooperation in science also has a long history of more
+than 50 years
 \cite{Mali-etal:2012,Scharnhorst-etal:2012}. Particularly appealing to
-researchers studying this topic is the use of network analysis, especially in
-the area of bibliometrics and scientometrics such as in citation networks that
-date as back as 1972 \cite{Garfield:1972}, co-authorship and collaboration networks also have a
-long tradition \cite{Todorov-etal:1991,Wagner-etal:2017}.\\
+researchers studying this topic is the use of network analysis,
+especially in the area of bibliometrics and scientometrics such as in
+citation networks that date as back as 1972 \cite{Garfield:1972},
+co-authorship and collaboration networks also have a long tradition
+\cite{Todorov-etal:1991,Wagner-etal:2017}.\\
 
-The approach we follow here articulates game theory
-together with complex network analysis. Putting together game-theoretic modeling
-on complex networks is common in studies about the emergence of cooperation
+The approach we follow here articulates game theory together with
+complex network analysis. Putting together game-theoretic modeling on
+complex networks is common in studies about the emergence of
+cooperation
 \cite{SzaboFath:2007,Nowak-etal:92,OshtukiNowak:2006,Santos-etal:2005,Santos-etal:2006}.
-However, in the context of science studies, it is far from being a unified,
-active field of research. There is no common set of questions and problems or a
-coherent body of models and theory aimed to understand the quirks and twists of
-cooperation in scientific communities. It is more likely to say that work of
-this kind are scarce and their implementatoin is on different situations related
-to the social life of science, where sometimes models are run on science
-collaboration networks because access to these kind of data is relatively easy
-to access.\\ 
+However, in the context of science studies, it is far from being a
+unified, active field of research. There is no common set of questions
+and problems or a coherent body of models and theory aimed to
+understand the quirks and twists of cooperation in scientific
+communities. It is more likely to say that work of this kind is
+scarce and their implementatoin is on different situations related to
+the social life of science, where sometimes models are run on science
+collaboration networks because access to these kind of data is
+relatively easy to access.\\
 
-Nevertheless, there is work done. For instance Wardil and Hauert have analyzed
-how does collaboration happen within co-authorship networks
-\cite{Wardil-etal:2015}. Using the \emph{Physical Review} journal historic database,
-these authors show the payoff differences between being the first author and the
-last author, where the first author is a cooperator that takes the highest load
-of work, while the last author is the \emph{laird} that can benefit from the
-work of the former and get engaged in many other projects. They argue that
-cooperation in a multi-authored paper resambles more to a snow-drift game than a
-prisoner's dilemma situation, since when co-authoring a paper, every body wins
-but each author pays a different price. Though this work takes into account the
-topology of the network as informative regarding cooperation patterns, the role
-of topology framing or fostering cooperation is not part of the study. \\
+Nevertheless, there is work done. For instance Wardil and Hauert have
+analyzed how does collaboration happen within co-authorship networks
+\cite{Wardil-etal:2015}. Using the \emph{Physical Review} journal
+historic database, these authors show the payoff differences between
+being the first author and the last author, where the first author is
+a cooperator that takes the highest load of work, while the last
+author is the \emph{laird} that can benefit from the work of the
+former and get engaged in many other projects. They argue that
+cooperation in a multi-authored paper resambles more to a snow-drift
+game than a prisoner's dilemma situation, since when co-authoring a
+paper, every body wins but each author pays a different price. Though
+this work takes into account the topology of the network as
+informative regarding cooperation patterns, the role of topology
+framing or fostering cooperation is not part of the study. \\
 
-Game theory over complex scientific information and collaboration networks has
-also attracted attention. Hanauske has applied \emph{Evolutionary Game Theory}
-to have a better understanding of the market of scientific information, that
-involves scientists as producers but also journal, that are in charge of its
-dissemination. One of his models connects scientist interest in maximazing their
-reputation and their decissions to publish in an Open Access Journal or in a
-journal that works under the traditional publication framework. He has also
-modeled a game-theretic interactions between scientists and journals for both
-players to go open access or not. Only this second model incorporates networks
+Game theory over complex scientific information and collaboration
+networks has also attracted attention. Hanauske has applied
+\emph{Evolutionary Game Theory} to have a better understanding of the
+market of scientific information, that involves scientists as
+producers but also journal, that are in charge of its
+dissemination. One of his models connects scientist interest in
+maximazing their reputation and their decissions to publish in an Open
+Access Journal or in a journal that works under the traditional
+publication framework. He has also modeled a game-theoretic
+interactions between scientists and journals for both players to go
+open access or not. Only this second model incorporates networks
 analysis \cite{Hanauske-etal:2012}.\\
 
 
-Another interesting behavior explored by game-theoretical modeling and complex
-networks has been done by Li and Cao \cite{Li-etal:2009}. This authors analyze the role of
-punishment in a science collaboration network. More precisely, they implemented
-an ultimatum bargaining model to understand the impact of the topology of a
-social network and the emergence of a population of punishers. In the ultimatum
-game, there are two players, one of them (the proponent) suggest to split a sum
-in two and its connected neighbor (the respondent), can decide to accept or
-reject the offer as it may be perceived more or less fair. If the respondent
-accepts, the sum is devided and the shares are divided according to the
-offer. If the offer is rejected the players do not get anything. According to
-the authors, the act of rejecting a selfish offer can be interpreted as a
-punishment since the player that rejects it is paying a cost of not receiving
-anything but the proponent looses even more, since his offer was selfish. Their
-results show that the population of punishers will emerge as a phase transition
-as the degree of selfishness increses among players. More over, they found a
+Another interesting behavior explored by game-theoretical modeling and
+complex networks has been done by Li and Cao \cite{Li-etal:2009}. This
+authors analyze the role of punishment in a science collaboration
+network. More precisely, they implemented an ultimatum bargaining
+model to understand the impact of the topology of a social network and
+the emergence of a population of punishers. In the ultimatum game,
+there are two players, one of them (the proponent) suggest to split a
+sum in two and its connected neighbor (the respondent), can decide to
+accept or reject the offer as it may be perceived more or less
+fair. If the respondent accepts, the sum is divided according to the
+offer. If the offer is rejected both players do not get
+anything. According to the authors, the act of rejecting a selfish
+offer can be interpreted as a punishment since the player that rejects
+it is paying a cost of not receiving anything but the proponent looses
+even more, since his offer was selfish. Their results show that the
+population of punishers will emerge as a phase transition as the
+degree of selfishness increses among players. Moreover, they found a
 dependence relation between the tolerance to selfish behaviors and the
-topologies of networks.\\ 
+topologies of networks.\\
 
 %%\cite{Hara-etal:2003,LiebermanNowak:2005}. \\
 
@@ -405,41 +417,40 @@ topologies of networks.\\
 % explored the effect of different topologies on the emergence of cooperation
 % \cite{Santos-etal:2005,HauertDoebeli:2004}.
 
-In a similar vein to the work of Li and Cao, we explore the network effect on
-the distribution of players having access to certain amount of resources shared
-by other players in the network and the distribution of the strength of
-interactions among them. Particularly, we implemented two games played
-simultaneously: one for maximizing individual utility based on the iterated
-Prisoner's Dilemma; the other, a coordination game for maximizing the connection
-strength between players. We are interested in how they affect each other in the
-context of a network of scientific collaboration under the idea that while
-researchers are interested in maximizing their utilities, they also know that it
-is important to invest in building collaborative relationships. These two
-behaviors are explored in a biomedical
-research community in M\'exico.\\
+In a similar vein to the work of Li and Cao, we explore the network
+effect on the distribution of players having access to certain amount
+of resources shared by other players in the network and the
+distribution of the strength of interactions among them. Particularly,
+we implemented two games played simultaneously: one for maximizing
+individual utility based on the iterated Prisoner's Dilemma; the
+other, a coordination game for maximizing the connection strength
+between players. We are interested in how they affect each other in
+the context of a network of scientific collaboration under the idea
+that while researchers are interested in maximizing their utilities,
+they also know that it is important to invest in building
+collaborative relationships. These two behaviors are explored in a
+biomedical research community in M\'exico.\\
 
-   In the context of our model, utility represents access to resources shared by
-   others.  The value of the utility function for a player is the sum of the
-   payoffs of playing prisoner's dilemma with its neighbors. The other
-   concurrent game consists of players trying to maximize the strength of their
-   interactions with other players. In the coordination game the best strategy
-   is to adopt the same strategy as the other player, as it pays the most,
-   regardless of cooperation or defection in the utility game. When both
-   cooperate the interaction gets a positive payoff, when both defect, the
-   interaction doesn't get affected; but if they do not coordinate, then the
-   interaction loses. The payoffs resulting from the coordination games are not
-   part of the utility function, however, both are considered by the agent to
-   decide whether to cooperate or defect. \\ 
-
+In the context of our model, utility represents access to resources
+shared by others. The value of the utility function for a player is
+the sum of the payoffs of playing prisoner's dilemma with its
+neighbors. In the other concurrent game players try to maximize the
+strength of their interactions by coordinating their strategy to that
+of their neighbors. Interaction strength is updated with no regard to
+cooperation or defection in the utility game. When both cooperate the
+interaction gets a positive payoff, when both defect, the interaction
+doesn't get affected; but if they do not coordinate, then the
+interaction loses. The payoffs resulting from the coordination games
+are not part of the utility function, however both are considered by
+the agent to decide whether to cooperate or defect. \\
 
 The manuscript is structured in four sections. First we describe
-\textit{FOSISS}, the main program for grants destined to applied biomedical 
-research in M\'exico. This is the source of the
-database from which we created the researchers collaboration network. Next we
-describe our model
-and the different network topologies in which we explored it.
-We then present our results and discuss them. In the last section
-we draw some final remarks and conclusions.
+\textit{FOSISS}, the main program for grants destined to applied
+biomedical research in M\'exico. This is the source of the database
+from which we created the researchers collaboration network. Next we
+describe our model and the different network topologies in which we
+explored it.  We then present our results and discuss them. In the
+last section we draw some final remarks and conclusions.
 
 \section*{Biomedical research: CONACyT and FOSISS}
 
