@@ -573,13 +573,12 @@ resources become fundamental tools for establishing fruitful collaborations.
 %% collaboration under certain social constraints  or topological properties.\\  
 
 Our model is based on the iterated version of the Prisoner's Dilemma (PD) and a
-coordination game instantiated on
-networks. In our model, an agent's decision to
-cooperate or defect depends on a balance between
-utilities and the current strength of its collaboration relationships. Such
-balance reflects the overall success or failure of its strategies. We
-study the behavior of the system under different topologies, including a
-real-world network.\\  
+coordination game instantiated on networks. In our model, an agent's decision to
+cooperate or defect depends on a balance between utilities and the current
+strength of its collaboration relationships. Such balance reflects the overall
+success or failure of its strategies. We study the behavior of the system under
+different topologies, including a
+real-world network.\\
 
 
 In our model, agents are embedded in a network with a varying number of
@@ -603,7 +602,7 @@ property of agents in which payoff is accumulated.\\
 \end{tabular}\\ \\
 
 The strength of the interaction, represented by $w$, is a property of the link between two agents and
-gets updated according to an $A_{ij}$ matrix of a coordination game. In the $w$ matrix, the highest value
+gets updated according to the payoff matrix of a coordination game. In the $w$ matrix, the highest value
 goes to an edge when both agents cooperate, getting an $R$ for reward; if one of
 them defects, the connection gets weaker getting $P$ for the collaborative
 connection being punished. If both agents defect, the value $w$ doesn't change,
@@ -623,12 +622,21 @@ neighbor, either because it wins or because it doesn't lose. \\
 
 
 After each game, the agent adds up utility ($u$), which is the sum of the
-payoffs following the PD matrix. A pair of neighbors will add or substract from the strength of
-their interaction ($w_{ji}$) as they coordinate or not, being $w$
-also cumulative. We measure global utility and strength of interaction for the whole
-network. Global utility $U$ is the sum of all individual utilities and global
-strength of interaction or $W$ is the sum of every pair of agents' links
-$w$. Strength of interaction may have different meanings. From an empirical point of view, it simply means the number of times two researchers have collaborated together in a comon research project. From a sociological and qualitative point of view, if these two scientists have been willing to collaborate more than once, it may signify some form of "trust" among them. But this may not be the only possible interpreation since it can be different for each case. Since the strength of interactions can be sociologically interpreted in so many ways, we decided to just quantify the  times two researchers collaborate, and by doing this avoiding any generalized interpretation of the quality of the interactions among researchers. \\
+payoffs following the PD matrix. A pair of neighbors will add or substract from
+the strength of their interaction ($w_{ji}$) as they coordinate or not, being
+$w$ also cumulative. We measure global utility and strength of interaction for
+the whole network. Global utility $U$ is the sum of all individual utilities and
+global strength of interaction or $W$ is the sum of every pair of agents' links
+$w$. {\color{red}Strength of interaction may have different meanings. From an empirical
+point of view, it simply means the number of times two researchers have
+collaborated together in a common research project. From a sociological and
+qualitative point of view, if these two scientists have been willing to
+collaborate more than once, it may signify some form of ``loyalty'' among them. But
+this may not be the only possible interpreation since it can be different for
+each case. Since the strength of interactions can be sociologically interpreted
+in so many ways, we decided to just quantify the  times two researchers
+collaborate, and by doing this avoiding any generalized interpretation of the
+quality of the interactions among researchers.} \\ 
 
 
 It should be noted that the same actions or behaviors work for
@@ -652,26 +660,29 @@ the case of the FOSISS network, edge weight is given by the number of
 collaborations among researchers, utility remains the same for all
 nodes as in the other networks.\\
 
-The probability for an agent to cooperate or defect depends on a
-number ($\eta$) that refers to a historical balance between average
-utility and the average strength of the connections with its
-neighbors. It is modeled so because we assume that whatever the result
-in utility or strength of interaction, as long as one of them
-increases, the player will be confident in the strategy followed so
-far. In every simulation step, each agent will independently play both games with
-every neighbor. Nonetheless, the agent sets its decision to cooperate or defect beforehand
-by assessing the overall situation of its relationships. This may
-sound odd, since one may think that a person decides for each
-relationship separately. However in this way players are optimizing
-access to resources and the strength of interactions to their
-neighbors at the same time, since their state is set by
-considering both together. The strength of interaction is updated independently for each pair of agents.  In a single play some interactions might be weakened, some may get strengthened and others may remain unaffected. Moreover, in this model, history is kept in the network as strength of interactions and it conditions the agent\'s disposition to cooperate or to defect. As the sayings go: Burnt children dread fire; A bad dog is not born but made.\\
+The probability for an agent to cooperate or defect depends on a number ($\eta$)
+that refers to a historical balance between average utility and the average
+strength of the connections with its neighbors. It is modeled so because we
+assume that whatever the result in utility or strength of interaction, as long
+as one of them increases, the player will be confident in the strategy followed
+so far. {\color{red}In every simulation step, each agent will independently play both games
+with every neighbor. Nonetheless, the agent sets its decision to cooperate or
+defect beforehand by assessing the overall situation of its relationships. This
+may sound odd, since one may think that a person decides for each relationship
+separately. However in this way players are optimizing access to resources and
+the strength of interactions to their neighbors at the same time, since their
+state is set by considering both together. The strength of interaction is
+updated independently for each pair of agents.  In a single play some
+interactions might be weakened, some may get strengthened and others may remain
+unaffected. Moreover, in this model, history is kept in the network as strength
+of interactions and it conditions the agent\'s disposition to cooperate or to
+defect. As the sayings go: Burnt children dread fire; A bad dog is not born but made.}\\
 
 
 $\eta$ is calculated as:\\ 
 
 
-$\eta_i = \frac{\langle f_i \rangle + \langle w_{ij} \rangle _j}{2}$\\
+$\eta_i = \frac{\langle u_i \rangle + \langle w_{ij} \rangle _j}{2}$\\
 
 For the agent to decide whether to cooperate or not, $\eta$ is
 compared to a global threshold $\nu$. If the agent's $\eta$ $>$ $\nu$,
