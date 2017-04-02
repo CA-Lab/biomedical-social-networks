@@ -1,4 +1,4 @@
-%% BioMed_Central_Tex_Template_v1.06
+% BioMed_Central_Tex_Template_v1.06
 %%                                      %
 %  bmc_article.tex            ver: 1.06 %
 %                                       %
@@ -573,18 +573,12 @@ resources become fundamental tools for establishing fruitful collaborations.
 
 \section*{Methodology}
 
-%% In this work we developed a model in order to have a better understanding of the
-%% distribution of utility and trust in real networks of biomedical research
-%% collaboration under certain social constraints  or topological properties.\\  
-
 Our model is based on the iterated version of the Prisoner's Dilemma (PD) and a
 coordination game instantiated on networks. In our model, an agent's decision to
 cooperate or defect depends on a balance between utilities and the current
 strength of its collaboration relationships. Such balance reflects the overall
 success or failure of its strategies. We study the behavior of the system under
-different topologies, including a
-real-world network.\\
-
+different topologies, including a real-world network.\\
 
 In our model, agents are embedded in a network with a varying number of
 neighbors. Following the traditional PD game, the strategy chosen by an agent
@@ -606,14 +600,16 @@ property of agents in which payoff is accumulated.\\
 
 \end{tabular}\\ \\
 
-The strength of the interaction, represented by $w$, is a property of the link between two agents and
-gets updated according to the payoff matrix of a coordination game. In the $w$ matrix, the highest value
-goes to an edge when both agents cooperate, getting an $R$ for reward; if one of
-them defects, the connection gets weaker getting $P$ for the collaborative
-connection being punished. If both agents defect, the value $w$ doesn't change,
-which means that agents didn't interact or that the interaction gets nullified
-$N$. In this game, the best action for any agent is to coordinate with its
-neighbor, either because it wins or because it doesn't lose. \\ 
+The strength of the interaction, represented by $w$, is a property of
+the link between two agents and gets updated according to the payoff
+matrix of a coordination game. In the $w$ matrix, the highest value
+goes to an edge when both agents cooperate, getting an $R$ for reward;
+if one of them defects, the connection gets weaker getting $P$ for the
+collaborative connection being punished. If both agents defect, the
+value $w$ doesn't change, which means that agents didn't interact or
+that the interaction gets nullified $N$. In this game, the best action
+for any agent is to coordinate with its neighbor, either because it
+wins or because it doesn't lose. \\
 
 {\bf $w$ payoff matrix}\\
 
@@ -644,16 +640,18 @@ collaborate, and by doing this avoiding any generalized interpretation of the
 quality of the interactions among researchers.} \\ 
 
 
-It should be noted that the same actions or behaviors work for
-  both $u$ and $w$. There are two reasons for this decision in the design of the
-model. The most general one is that we believe that in the real world,
-actions such as cooperating and defecting affect the strength of the interaction
-among people. The second one is that we think that selfishly maximizing access to resources and
-strengthening relationships are \emph{opposing forces} acting on the same set of
-behaviors. The actions of an agent imply a trade-off in which defecting may
-increase its utility at the expense of its collaborative relationships. If
-collaborators have nourished their relationships, they might be strong enough to
-endure occasional defection. Cooperating may build up relationships but it can be
+It should be noted that the same actions or behaviors work for both
+$u$ and $w$. There are two reasons for this decision in the design of
+the model. The most general one is that we believe that in the real
+world, actions such as cooperating and defecting affect the strength
+of the interaction among people. The second one is that we think that
+selfishly maximizing access to resources and strengthening
+relationships are \emph{opposing forces} acting on the same set of
+behaviors. The actions of an agent imply a trade-off in which
+defecting may increase its utility at the expense of its collaborative
+relationships. If collaborators have nourished their relationships,
+they might be strong enough to endure occasional
+defection. Cooperating may build up relationships but it can be
 expensive for the player.
 
 \subsection*{Model update}
@@ -707,7 +705,7 @@ as on the real biomedical research collaboration network. The
 simulation was run in a synchronous manner, in which all agents update their
 behavior simultaneously. \\   
 
-We ran two different experiments. In the first one we simulated different
+We ran two different experiments. In the First Experiment we simulated different
 values of carrying capacity $\nu$. With this experiment we were able
 to see how the number of cooperators, utility, strength of interactions
 among agents and the ratio of shifting state population would change
@@ -716,7 +714,7 @@ the same at initialization, for all values of the carrying
 capacity. Since the model is deterministic, it will return the same
 result if run under the same conditions.\\
 
-The second experiment consisted in running the simulation under the
+The Second Experiment consisted in running the simulation under the
 same degree of carrying capacity $\nu$ but randomizing the initial
 states of the agents. This would show that the system converges to a
 global state. For every network, the simulation was run 100 times and
@@ -889,7 +887,7 @@ degree and stays constant for the rest of the simulation.\\
 %   \\
 %   \includegraphics[scale=0.28]{images/barabasi_dc_nus_1.png} & \includegraphics[scale=0.28]{images/fosiss_dc_nus_1.png}
 \end{tabular}
-\caption{Ratio of cooperators as a function of carrying capacity and time. Topologies are: A. Random, Erd\"{o}s-R\'enyi. B. Watts-Strogatz. C. Barab\'asi-Albert. D. FOSISS.
+\caption{Ratio of cooperators as a function of carrying capacity and time during First Experiment. Topologies are: A. Random, Erd\"{o}s-R\'enyi. B. Watts-Strogatz. C. Barab\'asi-Albert. D. FOSISS.
 }\label{CD}
 \end{figure}
 
@@ -925,7 +923,7 @@ but there is a slight increase in both of them.\\
 % \includegraphics[scale=0.28]{images/erdos_fitness_nus_1.png} & \includegraphics[scale=0.28]{images/watts_fitness_nus_1.png} \\
 % \includegraphics[scale=0.28]{images/barabasi_fitness_nus_1.png} & \includegraphics[scale=0.28]{images/fosiss_fitness_nus_1.png}
 \end{tabular}
-\caption{Utility $U$ dynamics as a function of carrying capacity $\nu$ and time. Topologies are: A. Random, Erd\"{o}s-R\'enyi. B. Watts-Strogatz. C. Barab\'asi-Albert. D. FOSISS.}\label{fitness}
+\caption{First Experiment's utility $U$ dynamics as a function of carrying capacity $\nu$ and time. Topologies are: A. Random, Erd\"{o}s-R\'enyi. B. Watts-Strogatz. C. Barab\'asi-Albert. D. FOSISS.}\label{fitness}
 \end{figure}
 
 % \FloatBarrier
@@ -938,7 +936,7 @@ but there is a slight increase in both of them.\\
 % \includegraphics[scale=0.28]{images/erdos_trust_nus_1.png} & \includegraphics[scale=0.28]{images/watts_trust_nus_1.png} \\
 % \includegraphics[scale=0.28]{images/barabasi_trust_nus_1.png} & \includegraphics[scale=0.28]{images/fosiss_trust_nus_1.png}
 \end{tabular}
-\caption{Strength of interactions $w$ dynamics as a function of carrying capacity $\nu$ and time. Topologies are: A. Random, Erd\"{o}s-R\'enyi. B. Watts-Strogatz. C. Barab\'asi-Albert. D. FOSISS.}\label{trust}
+\caption{Strength of interactions $w$ dynamics as a function of carrying capacity $\nu$ and time during First Experiment. Topologies are: A. Random, Erd\"{o}s-R\'enyi. B. Watts-Strogatz. C. Barab\'asi-Albert. D. FOSISS.}\label{trust}
 \end{figure}
 
 % \FloatBarrier
@@ -962,7 +960,7 @@ and all nodes become defectors. \\
 % \includegraphics[scale=0.28]{images/barabasi_state_nus.png} & \includegraphics[scale=0.28]{images/fosiss_state_nus.png}
 \end{tabular}
 \caption{Shifting population between cooperators and defectors as a function of
-carrying capacity $\nu$ and time. Topologies are: A. Random, Erd\"{o}s-R\'enyi. B. Watts-Strogatz. C. Barab\'asi-Albert. D. FOSISS.}\label{state} 
+carrying capacity $\nu$ and time during First Experiment. Topologies are: A. Random, Erd\"{o}s-R\'enyi. B. Watts-Strogatz. C. Barab\'asi-Albert. D. FOSISS.}\label{state} 
 \end{figure}
 
 % \FloatBarrier
@@ -1010,7 +1008,7 @@ Barab\'asi-Albert network. \\
 % \includegraphics[scale=0.28]{images/barabasi_fitness.png} & 
 % \includegraphics[scale=0.28]{images/fosiss_fitness.png}
 \end{tabular}
-\caption{Utility distribution on different topologies. A. Random,
+\caption{Second Experiment's utility distribution on different topologies. A. Random,
   Erd\"{o}s-R\'enyi network displays a normal-like
   distribution. B. Watts-Strogatz network utility distribution is highly skewed
   to the right. C. Barab\'asi-Albert network utility is distributed highly
@@ -1055,7 +1053,7 @@ network. \\
 % \includegraphics[scale=0.28]{images/barabasi_trust.png} & 
 % \includegraphics[scale=0.28]{images/fosiss_trust.png}
 \end{tabular}
-\caption{Strength of interactions distribution on different topologies. A. Random, Erd\"{o}s-R\'enyi network displays a normal-like
+\caption{Strength of interactions distribution on different topologies during Second Experiment. A. Random, Erd\"{o}s-R\'enyi network displays a normal-like
 distribution. B. Watts-Strogatz network strength of interactions distribution is bimodal and highly skewed to the right. C.
 Barab\'asi-Albert network strength of interactions distribution is also a
 normal-like curve. D. FOSISS, biomedical researchers collaboration network distribution of strength of interactions is skewed to the right.}\label{histo_trust}  
@@ -1128,7 +1126,7 @@ In this work we have analyzed the influence of parameters
   heterogeneity of $0.873$. Because of it, one would expect to find
   the presence of important hubs \cite{Wu:2008}, that is, a few
   researchers control the whole network, as has been reported in some
-  other places \cite{yousefi-etal:2008}. Surprisingly, FOSISS network
+  other places \cite{Yousefi-etal:2008}. Surprisingly, FOSISS network
   centralization is very low $0.023$, i.e. there are no researchers
   that centralize the majority of connections. Our guess is that the
   network is composed of many small communities or groups with a
