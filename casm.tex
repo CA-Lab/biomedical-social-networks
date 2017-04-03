@@ -227,7 +227,7 @@ researchers by which they are morally obliged to cooperate by the same
 socio-cultural mechanisms. Finally, the range around the threshold
 that regulates the decision to cooperate or defect according to the
 agent's historical balance between utility and strength of
-collaborative relationships and carrying capacity of the system is
+collaborative relationships and an a parameter of confidence of the system is
 small, suggesting that there is a region in which a phase transition
 takes place from a population of cooperators to a population of
 defectors. Simulations like ours may help to develop science policies
@@ -516,7 +516,7 @@ project.\\
 
 Even though curation and analysis work of this database is still going
 on, some relevant facts about the biomedical research can be
-said. Over the period of 12 years, 32 general research areas have been
+said. Over the period of 12 years, 37 general research areas have been
 defined, the three most funded research areas are \emph{chronic and
   degenerative diseases}, \emph{malignant neoplasms}, and
 \emph{infectious and parasitic diseases}. The least funded area is
@@ -664,8 +664,8 @@ collaborations among researchers, utility remains the same for all
 nodes as in the other networks.\\
 
 The probability for an agent to cooperate or defect depends on a number ($\eta$)
-that refers to a historical balance between average utility and the average
-strength of the connections with its neighbors. It is modeled so because we
+that refers to a historical balance between average utility $\langle u_i \rangle$ and the average
+strength of the connections with its neighbors $\langle w_{ij} \rangle _j$. It is modeled so because we
 assume that whatever the result in utility or strength of interaction, as long
 as one of them increases, the player will be confident in the strategy followed
 so far. {\color{red}In every simulation step, each agent will independently play both games
@@ -687,16 +687,19 @@ $\eta$ is calculated as:\\
 
 $\eta_i = \frac{\langle u_i \rangle + \langle w_{ij} \rangle _j}{2}$\\
 
-For the agent to decide whether to cooperate or not, $\eta$ is
-compared to a global threshold $\nu$. If the agent's $\eta$ $>$ $\nu$,
-then he will cooperate, otherwise he will be suspicious and
-will defect. $\nu$ is a global parameter that establishes a threshold
-that an agent's $\eta$ must cross in order to decide to cooperate. In
-this way, $\nu$ can limit the size of the population of
-cooperators. Due to what the system and the game can offer to agents
-in terms of utilities and the strength of collaboration relationships,
-$\nu$ represents the carrying capacity of the
-system for the population of cooperators.\\
+For the agent to decide whether to cooperate or not, $\eta$ is compared to a
+global parameter $\nu$. This is a parameter that represents the minimum value of
+$\eta$ that a player must achieve in order to cooperate. If the agent's
+$\eta$ $>$ $\nu$, then he will cooperate, otherwise he will be suspicious and
+will defect. In this way, as we arbitrarily control the value of $\nu$ we can
+identify the values of $\eta$ where the population stops cooperating and begins
+to defect; also it makes possible to see how this transition takes place for the
+different network topologies.  \\
+
+
+%{\color {red}Due to what the system and the game can offer to agents
+%in terms of utilities and the strength of collaboration relationships,
+%$\nu$ represents a parameter of confidence of the system.}\\
 
 
 Our simulation was tested on an Erd\"{o}s-Reny\'i, a
@@ -706,16 +709,15 @@ simulation was run in a synchronous manner, in which all agents update their
 behavior simultaneously. \\   
 
 We ran two different experiments. In the First Experiment we simulated different
-values of carrying capacity $\nu$. With this experiment we were able
+values of the parameter of confidence $\nu$. With this experiment we were able
 to see how the number of cooperators, utility, strength of interactions
 among agents and the ratio of shifting state population would change
-in the range of the carrying capacity. The states of the agents were
-the same at initialization, for all values of the carrying
-capacity. Since the model is deterministic, it will return the same
+in the range of the parameter of confidence. The states of the agents were
+the same at initialization, for all values of $\nu$. Since the model is deterministic, it will return the same
 result if run under the same conditions.\\
 
 The Second Experiment consisted in running the simulation under the
-same degree of carrying capacity $\nu$ but randomizing the initial
+same value of the parameter of confidence $\nu$ but randomizing the initial
 states of the agents. This would show that the system converges to a
 global state. For every network, the simulation was run 100 times and
 results were averaged.
@@ -835,7 +837,7 @@ of neighbors of each node is $11.39$ \cite{Shannon:2003}.\\
 %\FloatBarrier
 
 Other results to report are those of the dynamics of different
-variables as the carrying capacity $\nu$ changes. The  most salient
+variables as the parameter of confidence $\nu$ changes. The  most salient
 result is that for $\nu$ between $0.19$ and $0.24$, there is an
 apparent phase transition in all different topologies and for all the
 different variables. It is worth noting that the shape
@@ -887,7 +889,7 @@ degree and stays constant for the rest of the simulation.\\
 %   \\
 %   \includegraphics[scale=0.28]{images/barabasi_dc_nus_1.png} & \includegraphics[scale=0.28]{images/fosiss_dc_nus_1.png}
 \end{tabular}
-\caption{Ratio of cooperators as a function of carrying capacity and time during First Experiment. Topologies are: A. Random, Erd\"{o}s-R\'enyi. B. Watts-Strogatz. C. Barab\'asi-Albert. D. FOSISS.
+\caption{Ratio of cooperators as a function of the parameter of confidence and time during First Experiment. Topologies are: A. Random, Erd\"{o}s-R\'enyi. B. Watts-Strogatz. C. Barab\'asi-Albert. D. FOSISS.
 }\label{CD}
 \end{figure}
 
@@ -923,7 +925,8 @@ but there is a slight increase in both of them.\\
 % \includegraphics[scale=0.28]{images/erdos_fitness_nus_1.png} & \includegraphics[scale=0.28]{images/watts_fitness_nus_1.png} \\
 % \includegraphics[scale=0.28]{images/barabasi_fitness_nus_1.png} & \includegraphics[scale=0.28]{images/fosiss_fitness_nus_1.png}
 \end{tabular}
-\caption{First Experiment's utility $U$ dynamics as a function of carrying capacity $\nu$ and time. Topologies are: A. Random, Erd\"{o}s-R\'enyi. B. Watts-Strogatz. C. Barab\'asi-Albert. D. FOSISS.}\label{fitness}
+\caption{First Experiment's utility $U$ dynamics as a function of the parameter
+  of confidence $\nu$ and time. Topologies are: A. Random, Erd\"{o}s-R\'enyi. B. Watts-Strogatz. C. Barab\'asi-Albert. D. FOSISS.}\label{fitness}
 \end{figure}
 
 % \FloatBarrier
@@ -936,8 +939,10 @@ but there is a slight increase in both of them.\\
 % \includegraphics[scale=0.28]{images/erdos_trust_nus_1.png} & \includegraphics[scale=0.28]{images/watts_trust_nus_1.png} \\
 % \includegraphics[scale=0.28]{images/barabasi_trust_nus_1.png} & \includegraphics[scale=0.28]{images/fosiss_trust_nus_1.png}
 \end{tabular}
-\caption{Strength of interactions $w$ dynamics as a function of carrying capacity $\nu$ and time during First Experiment. Topologies are: A. Random, Erd\"{o}s-R\'enyi. B. Watts-Strogatz. C. Barab\'asi-Albert. D. FOSISS.}\label{trust}
-\end{figure}
+\caption{Strength of interactions $w$ dynamics as a function of the parameter
+  of confidence $\nu$ and time during First Experiment. Topologies are:
+  A. Random, Erd\"{o}s-R\'enyi. B. Watts-Strogatz. C. Barab\'asi-Albert. D. FOSISS.}\label{trust}  
+\end{figure} 
 
 % \FloatBarrier
 
@@ -960,7 +965,10 @@ and all nodes become defectors. \\
 % \includegraphics[scale=0.28]{images/barabasi_state_nus.png} & \includegraphics[scale=0.28]{images/fosiss_state_nus.png}
 \end{tabular}
 \caption{Shifting population between cooperators and defectors as a function of
-carrying capacity $\nu$ and time during First Experiment. Topologies are: A. Random, Erd\"{o}s-R\'enyi. B. Watts-Strogatz. C. Barab\'asi-Albert. D. FOSISS.}\label{state} 
+the parameter
+  of confidence $\nu$ and time during First Experiment. Topologies are:
+  A. Random,
+  Erd\"{o}s-R\'enyi. B. Watts-Strogatz. C. Barab\'asi-Albert. D. FOSISS.}\label{state}  
 \end{figure}
 
 % \FloatBarrier
@@ -1106,33 +1114,26 @@ In this work we have analyzed the influence of parameters
 %resarchers and their communities.\\
   
   
- To close this article, we would like to comment on three
-  issues we consider important. The first one is about confronting our
-  results with data available to us from the biomedical research
-  community. Second, some remarks we believe are important about the
-  role of computational simulations in the social sciences. Finally we
-  would like to comment on our future work.\\
+  There are two issues we consider important. The first one is about
+  confronting our results with data available to us from the biomedical research
+  community. Second, we would like to comment on our future work.\\
 
 
-  The two main results of our model are the smoothness in
-  the phase transition-like behavior for different parameters and the
-  distribution of utility and strength of interactions in the FOSISS
-  network compared to other networks and their topologies. We are
-  certain that the particular structure of FOSISS network is playing a
-  central role in the results and because of that we would like to
-  discuss it a little bit further.\\
-
-  FOSISS network is highly hierarchical according to its
-  heterogeneity of $0.873$. Because of it, one would expect to find
-  the presence of important hubs \cite{Wu:2008}, that is, a few
-  researchers control the whole network, as has been reported in some
-  other places \cite{Yousefi-etal:2008}. Surprisingly, FOSISS network
-  centralization is very low $0.023$, i.e. there are no researchers
-  that centralize the majority of connections. Our guess is that the
-  network is composed of many small communities or groups with a
-  central researcher or Principal Investigator (PI). If this is the
-  case in the FOSISS network, it means that those groups have a very
-  hierarchical structure as well.\\
+  The two main results of our model are the smoothness in the phase
+  transition-like behavior for different parameters and the distribution of
+  utility and strength of interactions in the FOSISS network compared to other
+  networks and their topologies. We are certain that the particular structure of
+  FOSISS network is playing a central role in the results and because of that we
+  would like to discuss it a little bit further. FOSISS network is highly
+  hierarchical according to its heterogeneity of $0.873$. Because of it, one
+  would expect to find the presence of important hubs \cite{Wu:2008}, that is, a
+  few researchers control the whole network, as has been reported in some other
+  places \cite{Yousefi-etal:2008}. Surprisingly, FOSISS network centralization
+  is very low $0.023$, i.e. there are no researchers that centralize the
+  majority of connections. Our guess is that the network is composed of many
+  small communities or groups with a central researcher or Principal
+  Investigator (PI). If this is the case in the FOSISS network, it means that
+  those groups have a very hierarchical structure as well.\\
 
   Under such structure, when the clustering coefficient is
   considered, it can be said that groups are also well connected but
@@ -1190,8 +1191,8 @@ In this work we have analyzed the influence of parameters
   inside the groups, which means that there would not be enough
   information on the behavior of one group regarding its neighbors to
   constrain them as it seems to happen with individual researchers
-  inside their communities. Nevertheless, if values of the carrying
-  capacity $\nu$ keep increasing and it becomes more difficult to
+  inside their communities. Nevertheless, if values of the parameter
+  of cooperation $\nu$ keep increasing and it becomes more difficult to
   strengthen interactions, then strength of interactions begins to
   diminish inside groups.\\
 
