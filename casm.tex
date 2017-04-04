@@ -53,6 +53,7 @@
 %\RequirePackage{hyperref}
 \usepackage[utf8]{inputenc} %unicode support
 \usepackage{color}
+\usepackage{cite}
 % \usepackage[applemac]{inputenc} %applemac support if unicode package fails
 %\usepackage[latin1]{inputenc} %UNIX support if unicode package fails
 
@@ -420,18 +421,17 @@ networks.}\\
 % \cite{Santos-etal:2005,HauertDoebeli:2004}.
 
 {\color{red}In a similar vein to the work of Li and Cao,} we explore the network
-effect on the distribution of players having access to certain amount
-of resources shared by other players in the network and the
-distribution of the strength of interactions among them. Particularly,
-we implemented two games played simultaneously: one for maximizing
-individual utility based on the iterated Prisoner's Dilemma; the
-other, a coordination game for maximizing the connection strength
-between players. We are interested in how they affect each other in
-the context of a network of scientific collaboration under the idea
-that while researchers are interested in maximizing their utilities,
-they also know that it is important to invest in building
-collaborative relationships. These two behaviors are explored in a
-biomedical research community in M\'exico.\\
+effect on the distribution of players having access to certain amount of
+resources shared by other players in the network and the distribution of the
+strength of interactions among them. Particularly, we implemented two games
+played simultaneously: one for maximizing individual utility based on the
+iterated Prisoner's Dilemma (PD); the other, a coordination game for maximizing the
+connection strength between players. We are interested in how they affect each
+other in the context of a network of scientific collaboration under the idea
+that while researchers are interested in maximizing their utilities, they also
+know that it is important to invest in building collaborative
+relationships. \\ %This is important because what we have seen
+
 
 In the context of our model, utility represents access to resources
 shared by others. The value of the utility function for a player is
@@ -445,6 +445,20 @@ doesn't get affected; but if they do not coordinate, then the
 interaction loses. The payoffs resulting from the coordination games
 are not part of the utility function, however both are considered by
 the agent to decide whether to cooperate or defect. \\
+
+{\color {red}From our anthropological fieldwork among biomedical research communities, their
+networks appear to be quite paradoxical: while they seem very
+hierarchical and only few researchers get the most of the profit of collective
+work, a great deal of collaboration is maintained. In other words, we are
+intrigued by the fact that for all the power and profit gain asymmetries,
+people are still willing to collaborate, build trust and remain loyal to their
+PI's and mentors.These two behaviors are explored in a biomedical research
+community in M\'exico. We believe that by implementing PD game and coordination
+game in a real world network is a way of capturing the essence of this
+problem. From our point of view this is an important contribution as we not only
+use data extracted from bibliometric source as most collaboration networks are
+studied, but that the founding question on which the model has been developed is
+empirically based in the sociology of the case.}\\
 
 The manuscript is structured in four sections. First we describe
 \textit{FOSISS}, the main program for grants destined to applied
@@ -1080,29 +1094,27 @@ performance of the whole collaborative research system.\\
 \section*{Discussion}
 \label{sec:3}
 
-In this work we have analyzed the influence of parameters
-  given by the underlying social structure of a science collaborative
-  network on collective strength of interactions and utility dynamical
-  behavior, based on a class of iterated PD and coordination
-  games. Such parameters include mainly local and global connectivity
-  like the degree centrality and average clustering coefficient, as
-  well as communication patterns.\\
+In this work we have analyzed the influence of parameters given by the
+underlying social structure of a science collaborative network on collective
+strength of interactions and utility dynamical behavior, based on a class of
+iterated PD and coordination games. Such parameters include mainly local and
+global connectivity like the degree centrality and average clustering
+coefficient, as
+well as communication patterns.\\
 
-  Under the assumptions given by the model, we were able to
-  notice that, in general, communication within the social
-  collaborative networks has a positive correlation with average
-  strength of interactions between the individuals partaking in the
-  games and also with the global collective utility (given by the sum
-  of the individual payoffs). The better the communication among
-  players, the higher the strength of interactions and the utility
-  leading to an optimized functioning of the whole \emph{scientific
-    collaboration system}. This is an important result that may be
-  useful for scientific policy planning and may set a foundation for
-  the optimal use of social networks in scientific collaboration as a
-  means to improve the relationships among collaborating peers and
-  ultimately the performance of research systems.  We obviously need
-  more qualitative work in order to validate these results from a
-  sociological and anthropological perspective.\\
+Under the assumptions given by the model, we were able to notice that, in
+general, communication within the social collaborative networks has a positive
+correlation with average strength of interactions between the individuals
+partaking in the games and also with the global collective utility (given by the
+sum of the individual payoffs). The better the communication among players, the
+higher the strength of interactions and the utility leading to an optimized
+functioning of the whole \emph{scientific collaboration system}. This is an
+important result that may be useful for scientific policy planning and may set a
+foundation for the optimal use of social networks in scientific collaboration as
+a means to improve the relationships among collaborating peers and ultimately
+the performance of research systems.  We obviously need more qualitative work in
+order to validate these results from a
+sociological and anthropological perspective.\\
 
 %Furthermore, such validation is necessary because, as we said at
 %the beginning of this work, \emph{strength of
@@ -1114,107 +1126,142 @@ In this work we have analyzed the influence of parameters
 %resarchers and their communities.\\
   
   
-  There are two issues we consider important. The first one is about
-  confronting our results with data available to us from the biomedical research
-  community. Second, we would like to comment on our future work.\\
+% There are several issues we consider important to discuss. The first one is about confronting
+% our results with data available to us from the biomedical research
+% community. Second, we would like to comment on our future work.\\
+
+{\color {red}In the area of complex networks and game theory, it has being affirmed for a
+long time that scale-free networks promote the evolution of cooperation. Part of
+this property has been attributed to the presence of hubs
+\cite{Santos-etal:2005,Szolnoki-etal:2008,Du-etal:2008,Li-etal:2009,Yang-etal:2009,Lei-etal:2009,Liu-etal:2010,Cheng-etal:2010B,Li-etal:2014,Li-etal:2015,Ichinose:2017}. Perhaps
+less attention has been place on the persistence of cooperation and the the role
+played by the clustering coefficiente in scale-free and small-world networks
+\cite{Kim-etal:2002,Masuda-etal:2003,Wu-etal:2005,Wu-etal:2006,Guan-etal:2006,Fu:2007,Zhang-etal:2007,Thibert-Plante-etal:2007,Chen-etal:2008}. This is where our result comes in.} \\
 
 
-  The two main results of our model are the smoothness in the phase
-  transition-like behavior for different parameters and the distribution of
-  utility and strength of interactions in the FOSISS network compared to other
-  networks and their topologies. We are certain that the particular structure of
-  FOSISS network is playing a central role in the results and because of that we
-  would like to discuss it a little bit further. FOSISS network is highly
-  hierarchical according to its heterogeneity of $0.873$. Because of it, one
-  would expect to find the presence of important hubs \cite{Wu:2008}, that is, a
-  few researchers control the whole network, as has been reported in some other
-  places \cite{Yousefi-etal:2008}. Surprisingly, FOSISS network centralization
-  is very low $0.023$, i.e. there are no researchers that centralize the
-  majority of connections. Our guess is that the network is composed of many
-  small communities or groups with a central researcher or Principal
-  Investigator (PI). If this is the case in the FOSISS network, it means that
-  those groups have a very hierarchical structure as well.\\
+The two main outcomes of our model are the smoothness in the phase
+transition-like behavior for different parameters and the distribution of
+utility and strength of interactions in the FOSISS network compared to other
+networks and their topologies. We are certain that the particular structure of
+FOSISS network is playing a central role in the results and because of that we
+would like to discuss it a little bit further. FOSISS network is highly
+hierarchical according to its heterogeneity of $0.873$. Because of it, one would
+expect to find the presence of important hubs \cite{Wu:2008}, that is, a few
+researchers control the whole network, as has been reported in some elsewhere
+\cite{Yousefi-etal:2008}. Surprisingly, FOSISS network centralization is very
+low $0.023$, i.e. there are no researchers that centralize the majority of
+connections. Our guess is that the network is composed of many small communities
+or groups with a central researcher or Principal Investigator (PI). If this is
+the case, it means that those groups have a very hierarchical structure as
+well. This is similar to what has been reported by others about the
+heterogeneity in small-world networks, in which the combination of certain
+amount of hierarchy and small-worldness makes cooperation to peak over compared
+to the evolution of cooperation in homogeneous and the most heterogeneous
+networks \cite{Fu:2007}. For the FOSISS netwok, this property would enhanced
+cooperation among players, eventhough the distribution of utilities are skewed
+towards a handful of researchers. \\ 
 
-  Under such structure, when the clustering coefficient is
-  considered, it can be said that groups are also well connected but
-  that inter-group connections are sparse. In other words, individual
-  groups are strongly connected within but the network as a whole is
-  supported by a small number of links. We came by this idea partially
-  from another study about scientific collaborations based on
-  co-authorships in one of the research centers that is part of the
-  FOSISS network \cite{HernandezLemus:2013}. In the cited reference, an
-  apparently well integrated community was found (high clustering
-  coefficient and a very short characteristic path length). Such
-  integration was mostly superficial, since it depended on the
-  presence of external collaborators from other research institutions
-  (most of them from overseas).  Removing these external collaborators
-  brakes down the network into small subgraphs that worked
-  independently. Remarkably, those subgraphs corresponded to the real
-  groups of that research center.  What is more, several groups had a
-  hierarchical structure as the one we suspect is common in FOSISS
-  subgraphs. The results showed that collaboration was poor between
-  groups but strong among the members of each group, and that
-  collaboration among groups doesn't emerge bottom-up, instead it
-  seems to be promoted from the top, from the administrative
-  authorities.\\
 
-  We believe that the situation just referred is also
-  true for the whole biomedical research community in M\'exico. The
-  amount of PIs who have also been collaborators in other projects is
-  about one fifth of the total number of participants.  This is a
-  number big enough to connect the whole network in one giant
-  component. Yet, due to the topological characteristics of the FOSISS
-  network, it appears to be the case that researchers can be the
-  leaders in one project and collaborators in a different project of
-  \emph{its own research group}. CONACyT's funding policies makes it
-  impossible for a researcher to get a grant from a fund if that
-  researcher has an ongoing project with a grant from that same
-  fund. That is, a researcher can ask for a grant from FOSISS if and
-  only if at the moment he doesn't already have one.
-  This policy has lead researchers from the same group to ask
-  for grants from the same fund in order to rise their budgets. A
-  consequence of this behavior is that group interactions get
-  reinforced, but inter-group connections not necessarily so.\\
+% The two main results of our model are the smoothness in the phase
+% transition-like behavior for different parameters and the distribution of
+% utility and strength of interactions in the FOSISS network compared to other
+% networks and their topologies. We are certain that the particular structure of
+% FOSISS network is playing a central role in the results and because of that we
+% would like to discuss it a little bit further. FOSISS network is highly
+% hierarchical according to its heterogeneity of $0.873$. Because of it, one would
+% expect to find the presence of important hubs \cite{Wu:2008}, that is, a few
+% researchers control the whole network, as has been reported in some other places
+% \cite{Yousefi-etal:2008}. Surprisingly, FOSISS network centralization is very
+% low $0.023$, i.e. there are no researchers that centralize the majority of
+% connections. Our guess is that the network is composed of many small communities
+% or groups with a central researcher or Principal Investigator (PI). If this is
+% the case in the FOSISS network, it means that
+% those groups have a very hierarchical structure as well.\\
 
- As is common among scientific communities in biomedical
-  research, PIs play a central role in the network. Strong PIs and
-  well connected groups seem to be somehow responsible for the high
-  levels of strength of interactions and the centralization of utility
-  in our simulation. As for what seems to be phase transitions, in the
-  case of FOSISS networks, these are smoother than those in the other
-  networks with different topologies, even for those with a
-  small-world topology. We think that this behavior is also the result
-  of the hierarchical structure already mentioned. If this is true,
-  strength of interactions is first lost in the edges that link
-  different groups and then in the edges that connect members of the
-  groups. Connections between groups would not be as dense as those
-  inside the groups, which means that there would not be enough
-  information on the behavior of one group regarding its neighbors to
-  constrain them as it seems to happen with individual researchers
-  inside their communities. Nevertheless, if values of the parameter
-  of cooperation $\nu$ keep increasing and it becomes more difficult to
-  strengthen interactions, then strength of interactions begins to
-  diminish inside groups.\\
 
-  Another issue that we would like to mention about FOSISS network
-  topology is that it is not a robust collaboration network.  At the
-  level of groups, nodes might be well connected and consolidated but
-  at the level of the network, they could be no more than an aggregate
-  of individual groups. A robust network would be resistant to changes
-  in the connections between groups but in the case of FOSISS, it
-  seems that the network would brake down into small research groups
-  by cutting some edges, as it happened in our co-authorship
-  collaboration network \cite{HernandezLemus:2013}. The lack of
-  robustness might be indicative of the fact that resources stay
-  inside the groups, that is, they do not circulate through or
-  articulate different communities. For example, one may think of
-  certain expensive technologies for genomic research that could be
-  bought once and shared among research groups, however, this doesn't
-  seem to happen very often. There are some other consequences, such
-  as low communication among groups, atomization of practices and
-  know-hows, redundancy in equipment tenancy, difficulties in
-  implementing community-wide infrastructures such as biobanks,
-  etc. \\
+Under such structure, when the clustering coefficient is considered, it can be
+said that groups are also well connected but that inter-group connections are
+sparse. In other words, individual groups are strongly connected within but the
+network as a whole is supported by a small number of links. {\color{red}This is
+  not an uncommon pattern in social networks. It has been claimed that this form
+  of structure has been evolutionarily advantageous
+  \cite{Turchin:2015}. Moreover, research groups internal cohesion may be
+related to Wardil and Hauert idea that collaboration among scientists --at least
+in the case of multi-authored articles-, is more similar to a ``snow-drift
+game'' than to a PD game, since in the former everybody wins or everybody pays a
+cost but the cost are not evenly distributed among the players.}\\
+
+We came by the idea that intra-networks are stronger than inter-networks, from
+another study about scientific collaborations based on co-authorships 
+\cite{HernandezLemus:2013}. In the cited reference, an apparently well
+integrated community was found (high clustering coefficient and a very short
+characteristic path length). Such integration was mostly superficial, since it
+depended on the presence of external collaborators from other research
+institutions (most of them from overseas).  Removing these external
+collaborators brakes down the network into small subgraphs that worked
+independently. Remarkably, those subgraphs corresponded to the real groups of
+that research center.  What is more, several groups had a hierarchical structure
+as the one we suspect is common in FOSISS subgraphs. The results showed that
+collaboration was poor between groups but strong among the members of each
+group, and that collaboration among groups doesn't emerge bottom-up, instead it
+seems to be promoted from the top, from the administrative
+authorities.\\
+
+We believe that the situation just referred is also true for the whole
+biomedical research community in M\'exico. The amount of PIs who have also been
+collaborators in other projects is about one fifth of the total number of
+participants.  This is a number big enough to connect the whole network in one
+giant component. Yet, due to the topological characteristics of the FOSISS
+network, it appears to be the case that researchers can be the leaders in one
+project and collaborators in a different project of \emph{its own research
+  group}. CONACyT's funding policies makes it impossible for a researcher to get
+a grant from a fund if that researcher has an ongoing project with a grant from
+that same fund. That is, a researcher can ask for a grant from FOSISS if and
+only if at the moment he doesn't already have one.  This policy has lead
+researchers from the same group to ask for grants from the same fund in order to
+rise their budgets. A consequence of this behavior is that group interactions
+get reinforced, but inter-group connections not necessarily so.\\
+
+As is common among scientific communities in biomedical research, PIs play a
+central role in the network. Strong PIs and well connected groups seem to be
+somehow responsible for the high levels of strength of interactions and the
+centralization of utility in our simulation. As for what seems to be phase
+transitions, in the case of FOSISS networks, these are smoother than those in
+the other networks with different topologies, even for those with a small-world
+topology. We think that this behavior is also the result of the hierarchical
+structure already mentioned. If this is true, strength of interactions is first
+lost in the edges that link different groups and then in the edges that connect
+members of the groups.\\
+
+Connections between groups would not be as dense as those
+inside the groups, which means that there would not be enough information on the
+behavior of one group regarding its neighbors to constrain them as it seems to
+happen with individual researchers inside their communities. Nevertheless, if
+values of the parameter of cooperation $\nu$ keep increasing and it becomes more
+difficult to strengthen interactions, then strength of interactions begins to
+diminish inside groups. {\color {red}And yet, the smoothness observerd in the small-world
+network and FOSISS network may be attributed to the power of the clustering
+coefficient. As has been referred by Li and Cao \cite{Li-etal:2009}, and
+Thibert-Plante and Parrott \cite{Thibert-Plante-etal:2007} for scientific
+collaboration networks, high clustering coefficient allows the system to resist
+the invasion of non-cooperators.}\\ 
+
+Another issue that we would like to mention about FOSISS network topology is
+that it is not a robust collaboration network.  At the level of groups, nodes
+might be well connected and consolidated but at the level of the network, they
+could be no more than an aggregate of individual groups. A robust network would
+be resistant to changes in the connections between groups but in the case of
+FOSISS, it seems that the network would brake down into small research groups by
+cutting some edges, as it happened in our co-authorship collaboration network
+\cite{HernandezLemus:2013}. The lack of robustness might be indicative of the
+fact that resources stay inside the groups, that is, they do not circulate
+through or articulate different communities. For example, one may think of
+certain expensive technologies for genomic research that could be bought once
+and shared among research groups, however, this doesn't seem to happen very
+often. There are some other consequences, such as low communication among
+groups, atomization of practices and know-hows, redundancy in equipment tenancy,
+difficulties in implementing community-wide infrastructures such as biobanks,
+etc. \\
 
   On these grounds, part of our future work is based on the results
   presented here. We would like to identify researchers in our
